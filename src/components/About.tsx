@@ -8,11 +8,11 @@ const About = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-x-16 items-start">
             {/* Texto e valores */}
-            <div className="animate-fade-in-up">
+            <div className="animate-fade-in-up w-full">
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-earth mb-8 drop-shadow-sm">
                 Sobre a Taberna Saloia
               </h2>
-              <div>
+              <div className="w-full">
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                   A Taberna Saloia é um verdadeiro <span className="text-earth font-semibold">tesouro</span> da gastronomia portuguesa, onde as <span className="text-earth font-semibold">tradições culinárias</span> se encontram com a <span className="text-earth font-semibold">hospitalidade genuína</span> que caracteriza o nosso povo.
                 </p>
@@ -22,9 +22,9 @@ const About = () => {
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                   Cada prato conta uma história, cada refeição é uma celebração da nossa rica herança gastronómica. Venha descobrir os verdadeiros sabores de Portugal na Taberna Saloia.
                 </p>
-                <div className="bg-background/80 p-8 rounded-xl shadow-lg mt-0">
+                <div className="bg-background/80 p-8 rounded-xl shadow-lg mt-0 w-full">
                   <h3 className="text-2xl font-bold text-earth mb-6 font-serif text-center">Os Nossos Valores</h3>
-                  <div className="grid grid-cols-3 gap-8">
+                  <div className="grid grid-cols-3 gap-8 w-full">
                     <div className="text-center group hover:bg-cream/60 rounded-lg p-4 transition">
                       <FaBookOpen className="w-8 h-8 text-earth mx-auto mb-3 group-hover:scale-110 transition-transform" />
                       <h4 className="font-semibold text-earth text-sm mb-2">Tradição</h4>
