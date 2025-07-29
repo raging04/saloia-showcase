@@ -7,16 +7,8 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-x-16 items-center">
-            {/* Imagem ilustrativa */}
-            <div className="hidden md:block animate-fade-in-left">
-              <img
-                src={heroImage}
-                alt="Interior da Taberna Saloia"
-                className="rounded-2xl shadow-2xl object-cover w-full h-96 border-4 border-earth/10"
-              />
-            </div>
             {/* Texto e valores */}
-            <div className="flex flex-col justify-center h-full animate-fade-in-up">
+            <div className="animate-fade-in-up">
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-earth mb-8 drop-shadow-sm">
                 Sobre a Taberna Saloia
               </h2>
@@ -31,32 +23,34 @@ const About = () => {
                   Cada prato conta uma história, cada refeição é uma celebração da nossa rica herança gastronómica. Venha descobrir os verdadeiros sabores de Portugal na Taberna Saloia.
                 </p>
                 <div className="bg-background/80 p-8 rounded-xl shadow-lg mt-0 max-w-md">
-                  <h3 className="text-2xl font-bold text-earth mb-6 font-serif">Os Nossos Valores</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start space-x-4 group hover:bg-cream/60 rounded-lg p-2 transition">
-                      <FaBookOpen className="w-7 h-7 text-earth mt-1 group-hover:scale-110 transition-transform" />
-                      <div>
-                        <h4 className="font-semibold text-earth">Tradição</h4>
-                        <p className="text-muted-foreground text-sm">Receitas autênticas transmitidas de geração em geração</p>
-                      </div>
+                  <h3 className="text-2xl font-bold text-earth mb-6 font-serif text-center">Os Nossos Valores</h3>
+                  <div className="grid grid-cols-3 gap-4">
+                    <div className="text-center group hover:bg-cream/60 rounded-lg p-4 transition">
+                      <FaBookOpen className="w-8 h-8 text-earth mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                      <h4 className="font-semibold text-earth text-sm mb-2">Tradição</h4>
+                      <p className="text-muted-foreground text-xs">Receitas autênticas transmitidas de geração em geração</p>
                     </div>
-                    <div className="flex items-start space-x-4 group hover:bg-cream/60 rounded-lg p-2 transition">
-                      <FaLeaf className="w-7 h-7 text-earth mt-1 group-hover:scale-110 transition-transform" />
-                      <div>
-                        <h4 className="font-semibold text-earth">Qualidade</h4>
-                        <p className="text-muted-foreground text-sm">Ingredientes frescos e cuidadosamente selecionados</p>
-                      </div>
+                    <div className="text-center group hover:bg-cream/60 rounded-lg p-4 transition">
+                      <FaLeaf className="w-8 h-8 text-earth mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                      <h4 className="font-semibold text-earth text-sm mb-2">Qualidade</h4>
+                      <p className="text-muted-foreground text-xs">Ingredientes frescos e cuidadosamente selecionados</p>
                     </div>
-                    <div className="flex items-start space-x-4 group hover:bg-cream/60 rounded-lg p-2 transition">
-                      <FaHeart className="w-7 h-7 text-earth mt-1 group-hover:scale-110 transition-transform" />
-                      <div>
-                        <h4 className="font-semibold text-earth">Hospitalidade</h4>
-                        <p className="text-muted-foreground text-sm">Acolhimento caloroso e serviço de excelência</p>
-                      </div>
+                    <div className="text-center group hover:bg-cream/60 rounded-lg p-4 transition">
+                      <FaHeart className="w-8 h-8 text-earth mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                      <h4 className="font-semibold text-earth text-sm mb-2">Hospitalidade</h4>
+                      <p className="text-muted-foreground text-xs">Acolhimento caloroso e serviço de excelência</p>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            {/* Imagem ilustrativa */}
+            <div className="hidden md:block animate-fade-in-left">
+              <img
+                src={heroImage}
+                alt="Interior da Taberna Saloia"
+                className="rounded-2xl shadow-2xl object-cover w-full h-96 border-4 border-earth/10"
+              />
             </div>
             {/* Imagem mobile */}
             <div className="md:hidden mb-8 animate-fade-in-up">
