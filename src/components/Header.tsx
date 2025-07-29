@@ -1,52 +1,41 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMenuOpen(false);
-  };
+  const menuItems = [
+    { name: "Início", href: "/" },
+    { name: "Ementa", href: "/ementa" },
+    { name: "Contactos", href: "/contactos" }
+  ];
 
   return (
     <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <h1 className="text-2xl font-bold text-earth">Taberna Saloia</h1>
+            <Link to="/" className="text-2xl font-bold text-earth hover:text-earth/80 transition-colors">
+              Taberna Saloia
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <button 
-              onClick={() => scrollToSection('inicio')}
-              className="text-foreground hover:text-earth transition-colors"
-            >
-              Início
-            </button>
-            <button 
-              onClick={() => scrollToSection('pratos')}
-              className="text-foreground hover:text-earth transition-colors"
-            >
-              Pratos
-            </button>
-            <button 
-              onClick={() => scrollToSection('ementa')}
-              className="text-foreground hover:text-earth transition-colors"
-            >
-              Ementa
-            </button>
-            <button 
-              onClick={() => scrollToSection('contactos')}
-              className="text-foreground hover:text-earth transition-colors"
-            >
-              Contactos
-            </button>
+            {menuItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`text-earth hover:text-earth/80 transition-colors font-medium ${
+                  location.pathname === item.href ? 'border-b-2 border-earth' : ''
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
           </nav>
 
           {/* Mobile Menu Button */}
@@ -64,30 +53,18 @@ const Header = () => {
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 border-t border-border pt-4">
             <div className="flex flex-col space-y-4">
-              <button 
-                onClick={() => scrollToSection('inicio')}
-                className="text-left text-foreground hover:text-earth transition-colors"
-              >
-                Início
-              </button>
-              <button 
-                onClick={() => scrollToSection('pratos')}
-                className="text-left text-foreground hover:text-earth transition-colors"
-              >
-                Pratos
-              </button>
-              <button 
-                onClick={() => scrollToSection('ementa')}
-                className="text-left text-foreground hover:text-earth transition-colors"
-              >
-                Ementa
-              </button>
-              <button 
-                onClick={() => scrollToSection('contactos')}
-                className="text-left text-foreground hover:text-earth transition-colors"
-              >
-                Contactos
-              </button>
+              {menuItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`text-left text-earth hover:text-earth/80 transition-colors font-medium ${
+                    location.pathname === item.href ? 'bg-warmth/20 px-2 py-1 rounded' : ''
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
             </div>
           </nav>
         )}
