@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import FeaturedDishes from "@/components/FeaturedDishes";
+import DynamicGallery from "@/components/DishGallery";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -10,7 +10,7 @@ const Index = () => {
       <Header />
       <Hero />
       <About />
-      <FeaturedDishes />
+      <DynamicGallery />
       <Footer />
     </div>
   );
