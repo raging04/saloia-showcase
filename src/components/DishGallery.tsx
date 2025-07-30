@@ -119,12 +119,6 @@ const DynamicGallery = () => {
                         <p className="text-white/90 text-sm drop-shadow-lg">
                           {item.description}
                         </p>
-                        <div className="mt-4">
-                          <Button variant="outline" size="sm" className="text-white border-white hover:bg-white hover:text-black transition-all duration-300">
-                            <FaEye className="w-4 h-4 mr-2" />
-                            Ver mais
-                          </Button>
-                        </div>
                       </div>
                     </div>
                   </div>
