@@ -1,4 +1,7 @@
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram, ExternalLink } from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import facebookLogo from "@/assets/facebook-svgrepo-com.svg";
+import instagramLogo from "@/assets/instagram-svgrepo-com.svg";
+import linktreeLogo from "@/assets/Linktree Logo.svg";
 
 const Footer = () => {
   return (
@@ -7,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Restaurant Info */}
           <div>
-            <div className="mb-4">
+            <div className="mb-6">
               <img 
                 src="/Logo_TabernaSaloia.svg" 
                 alt="Taberna Saloia" 
@@ -19,44 +22,56 @@ const Footer = () => {
                 href="https://facebook.com/tabernasaloia" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-earth-foreground/80 hover:text-white transition-colors"
+                className="text-white hover:opacity-80 transition-opacity"
               >
-                <Facebook className="w-6 h-6" />
+                <img 
+                  src={facebookLogo} 
+                  alt="Facebook" 
+                  className="w-8 h-8 filter brightness-0 invert"
+                />
               </a>
               <a 
                 href="https://instagram.com/tabernasaloia" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-earth-foreground/80 hover:text-white transition-colors"
+                className="text-white hover:opacity-80 transition-opacity"
               >
-                <Instagram className="w-6 h-6" />
+                <img 
+                  src={instagramLogo} 
+                  alt="Instagram" 
+                  className="w-8 h-8 filter brightness-0 invert"
+                />
               </a>
               <a 
                 href="https://linktr.ee/tabernasaloia" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-earth-foreground/80 hover:text-white transition-colors"
+                className="text-white hover:opacity-80 transition-opacity"
               >
-                <ExternalLink className="w-6 h-6" />
+                <img 
+                  src={linktreeLogo} 
+                  alt="Linktree" 
+                  className="w-8 h-8 filter brightness-0 invert"
+                />
               </a>
             </div>
           </div>
 
           {/* Quick Contact */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contacto Rápido</h4>
+            <h4 className="text-lg font-semibold mb-4">Contactos</h4>
             <div className="space-y-2 text-earth-foreground/80">
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                <span>+351 262 123 456</span>
+                <span>+351 21 983 11 76</span>
               </div>
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                <span>geral@tabernasaloia.pt</span>
+                <span>info@tabernasaloia.pt</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 mr-2" />
-                <span>Caldas da Rainha</span>
+                <span>Avenida das Descobertas 41 - Loja Esquerda<br> Infantado - Loures</br></span>
               </div>
             </div>
           </div>
@@ -65,15 +80,14 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Horário</h4>
             <div className="space-y-1 text-earth-foreground/80 text-sm">
-              <p>Seg-Qui: 12:00-15:00 | 19:00-23:00</p>
-              <p>Sex-Sáb: 12:00-15:00 | 19:00-24:00</p>
-              <p>Domingo: 12:00-16:00</p>
+              <p>Seg-Sáb (Exceto quarta-feira ao jantar): 12:00-15:00 | 19:00-23:00</p>
+              <p>Estamos encerrados nos dias de domingo e feriados.</p>
             </div>
           </div>
         </div>
 
         <div className="border-t border-earth-foreground/20 mt-8 pt-8 text-center text-earth-foreground/60">
-          <p>&copy; 2024 Taberna Saloia. Todos os direitos reservados.</p>
+          <p>&copy; 2025 A Taberna Saloia da Avenida. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
