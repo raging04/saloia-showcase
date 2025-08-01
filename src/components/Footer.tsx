@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram, ExternalLink } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -14,26 +14,49 @@ const Footer = () => {
                 className="h-16 w-auto filter brightness-0 invert"
               />
             </div>
-            <p className="text-earth-foreground/80 mb-4">
-              Uma taberna de amigos no coração do Infantado, em Loures, onde a melhor comida é aquela que nos faz sentir em casa.
-            </p>
+            <div className="flex space-x-4">
+              <a 
+                href="https://facebook.com/tabernasaloia" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-earth-foreground/80 hover:text-white transition-colors"
+              >
+                <Facebook className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://instagram.com/tabernasaloia" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-earth-foreground/80 hover:text-white transition-colors"
+              >
+                <Instagram className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://linktr.ee/tabernasaloia" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-earth-foreground/80 hover:text-white transition-colors"
+              >
+                <ExternalLink className="w-6 h-6" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Contact */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contactos</h4>
+            <h4 className="text-lg font-semibold mb-4">Contacto Rápido</h4>
             <div className="space-y-2 text-earth-foreground/80">
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                <span>+351 21 983 11 76</span>
+                <span>+351 262 123 456</span>
               </div>
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                <span>info@tabernasaloia.pt</span>
+                <span>geral@tabernasaloia.pt</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 mr-2" />
-                <span>Avenida das Descobertas 41 - Loja Esquerda | Infantado - Loures</span>
+                <span>Caldas da Rainha</span>
               </div>
             </div>
           </div>
@@ -42,8 +65,9 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Horário</h4>
             <div className="space-y-1 text-earth-foreground/80 text-sm">
-              <p>Seg-Sáb (Exceto quarta-feira ao jantar): 12:00-15:00 | 19:00-23:00</p>
-              <p>Estamos encerrados nos dias de domingo e feriados.</p>
+              <p>Seg-Qui: 12:00-15:00 | 19:00-23:00</p>
+              <p>Sex-Sáb: 12:00-15:00 | 19:00-24:00</p>
+              <p>Domingo: 12:00-16:00</p>
             </div>
           </div>
         </div>
