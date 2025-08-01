@@ -15,7 +15,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-earth-foreground/80 mb-4">
-              Tradição e sabor autêntico da culinária portuguesa num ambiente familiar e acolhedor.
+              Uma taberna de amigos no coração do Infantado, em Loures, onde a melhor comida é aquela que nos faz sentir em casa.
             </p>
           </div>
 
