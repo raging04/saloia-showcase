@@ -14,16 +14,16 @@ const About = () => {
               </h2>
               <div>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Na Taberna Saloia, acreditamos que a melhor comida é aquela que nos faz sentir em casa. Desde 2016, no coração do Infantado, em Loures, trazemos à mesa os sabores autênticos da gastronomia portuguesa, com pratos caseiros, petiscos tradicionais e um atendimento que vem com um sorriso.
+                  Na Taberna Saloia, acreditamos que a <span className="text-earth font-semibold">melhor comida é aquela que nos faz sentir em casa</span>. Desde 2016, no coração do <span className="text-earth font-semibold">Infantado, em Loures</span>, trazemos à mesa os sabores autênticos da gastronomia portuguesa, com pratos caseiros, petiscos tradicionais e um atendimento que vem com um sorriso.
                 </p>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Inspirados nas raízes saloias da região, criámos um espaço acolhedor onde cada refeição é um momento de partilha. Do cozido à portuguesa ao caril de gambas, passando pelos bifes suculentos e sugestões diárias, tudo é preparado com ingredientes frescos, respeito pela tradição e um toque de carinho.
+                  Inspirados nas <span className="text-earth font-semibold">raízes saloias da região</span>, criámos um espaço acolhedor onde cada refeição é um momento de partilha. Tudo é preparado com ingredientes frescos, respeito pela tradição e um toque de carinho.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  Mais do que um restaurante, somos uma taberna de amigos — feita para almoços em família, jantares descontraídos e conversas que se prolongam.
+                  Mais do que um restaurante, somos uma <span className="text-earth font-semibold">taberna de amigos</span> — feita para almoços em família, jantares descontraídos e conversas que se prolongam.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  Se ainda não nos conhece, venha descobrir o sabor da tradição.
+                  Se ainda não nos conhece, venha descobrir o <span className="text-earth font-semibold">sabor da tradição</span>.
                   Se já conhece, sabe que aqui há sempre lugar à mesa para mais um.
                 </p>
               </div>
@@ -51,29 +51,21 @@ const About = () => {
             <div className="bg-background/80 p-8 rounded-xl shadow-lg w-full">
               <h3 className="text-2xl font-bold text-earth mb-6 font-serif text-center">Os Nossos Valores</h3>
               <div className="grid grid-cols-3 gap-8 w-full">
-                  <div className="space-y-4">
-                    <div className="flex items-start space-x-4 group hover:bg-cream/60 rounded-lg p-2 transition">
-                      <FaBookOpen className="w-7 h-7 text-earth mt-1 group-hover:scale-110 transition-transform" />
-                      <div>
-                        <h4 className="font-semibold text-earth">Tradição Saloia</h4>
-                        <p className="text-muted-foreground text-sm">Inspirados nas raízes da região, preservamos os sabores autênticos</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-4 group hover:bg-cream/60 rounded-lg p-2 transition">
-                      <FaLeaf className="w-7 h-7 text-earth mt-1 group-hover:scale-110 transition-transform" />
-                      <div>
-                        <h4 className="font-semibold text-earth">Casa & Família</h4>
-                        <p className="text-muted-foreground text-sm">Um espaço acolhedor onde cada refeição é um momento de partilha</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-4 group hover:bg-cream/60 rounded-lg p-2 transition">
-                      <FaHeart className="w-7 h-7 text-earth mt-1 group-hover:scale-110 transition-transform" />
-                      <div>
-                        <h4 className="font-semibold text-earth">Amizade</h4>
-                        <p className="text-muted-foreground text-sm">Mais do que um restaurante, somos uma taberna de amigos</p>
-                      </div>
-                    </div>
-                  </div>
+                <div className="text-center group hover:bg-cream/60 rounded-lg p-4 transition">
+                  <FaBookOpen className="w-8 h-8 text-earth mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                  <h4 className="font-semibold text-earth text-sm mb-2">Tradição Saloia</h4>
+                  <p className="text-muted-foreground text-xs">Inspirados nas raízes da região, preservamos os sabores autênticos</p>
+                </div>
+                <div className="text-center group hover:bg-cream/60 rounded-lg p-4 transition">
+                  <FaLeaf className="w-8 h-8 text-earth mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                  <h4 className="font-semibold text-earth text-sm mb-2">Casa & Família</h4>
+                  <p className="text-muted-foreground text-xs">Um espaço acolhedor onde cada refeição é um momento de partilha</p>
+                </div>
+                <div className="text-center group hover:bg-cream/60 rounded-lg p-4 transition">
+                  <FaHeart className="w-8 h-8 text-earth mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                  <h4 className="font-semibold text-earth text-sm mb-2">Amizade</h4>
+                  <p className="text-muted-foreground text-xs">Mais do que um restaurante, somos uma taberna de amigos</p>
+                </div>
               </div>
             </div>
           </div>

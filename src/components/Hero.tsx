@@ -30,7 +30,7 @@ const Hero = () => {
           Taberna Saloia
         </h1>
         <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-90 animate-fade-in-up delay-100">
-          Sabores autênticos da tradição portuguesa num ambiente acolhedor e familiar
+          Uma taberna de amigos no coração do Infantado, em Loures, onde a melhor comida é aquela que nos faz sentir em casa
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-200">
           <Button
@@ -51,8 +51,8 @@ const Hero = () => {
         </div>
       </div>
       {/* Scroll indicator estilizado */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white z-10 animate-bounce">
-        <span className="text-xs mb-1 opacity-80 tracking-wide">Deslize para saber mais</span>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center text-white z-10 animate-bounce">
+        <span className="text-xs mb-1 opacity-80 tracking-wide text-center">Deslize para saber mais</span>
         <svg
           className="w-7 h-7"
           fill="none"
