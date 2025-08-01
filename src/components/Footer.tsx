@@ -21,19 +21,19 @@ const Footer = () => {
 
           {/* Quick Contact */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contacto Rápido</h4>
+            <h4 className="text-lg font-semibold mb-4">Contactos</h4>
             <div className="space-y-2 text-earth-foreground/80">
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                <span>+351 262 123 456</span>
+                <span>+351 21 983 11 76</span>
               </div>
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                <span>geral@tabernasaloia.pt</span>
+                <span>info@tabernasaloia.pt</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 mr-2" />
-                <span>Caldas da Rainha</span>
+                <span>Avenida das Descobertas 41 - Loja Esquerda | Infantado - Loures</span>
               </div>
             </div>
           </div>
@@ -42,9 +42,8 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Horário</h4>
             <div className="space-y-1 text-earth-foreground/80 text-sm">
-              <p>Seg-Qui: 12:00-15:00 | 19:00-23:00</p>
-              <p>Sex-Sáb: 12:00-15:00 | 19:00-24:00</p>
-              <p>Domingo: 12:00-16:00</p>
+              <p>Seg-Sáb (Exceto quarta-feira ao jantar): 12:00-15:00 | 19:00-23:00</p>
+              <p>Estamos encerrados nos dias de domingo e feriados.</p>
             </div>
           </div>
         </div>
