@@ -51,7 +51,7 @@ const Hero = () => {
         </div>
       </div>
       {/* Scroll indicator estilizado */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white z-10 animate-bounce">
+      <div className="absolute bottom-8 left-0 right-0 flex flex-col items-center text-white z-10 animate-bounce">
         <span className="text-xs mb-1 opacity-80 tracking-wide">Deslize para saber mais</span>
         <svg
           className="w-7 h-7"
