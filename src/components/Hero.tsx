@@ -44,7 +44,7 @@ const Hero = () => {
             onClick={() => scrollToSection("contactos")}
             variant="outline"
             size="lg"
-            className="border-warmth text-earth bg-white/90 hover:bg-warmth hover:text-white text-lg px-8 py-3 shadow-lg transition-transform hover:-translate-y-1 flex items-center gap-2"
+            className="border-warmth text-earth bg-white/90 hover:bg-earth hover:text-white hover:border-earth text-lg px-8 py-3 shadow-lg transition-all duration-300 hover:-translate-y-1 flex items-center gap-2"
           >
             <FaRegCalendarAlt className="inline-block mb-0.5" /> Reservar Mesa
           </Button>
