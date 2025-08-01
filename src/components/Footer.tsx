@@ -69,9 +69,12 @@ const Footer = () => {
                 <Mail className="w-4 h-4 mr-2" />
                 <span>info@tabernasaloia.pt</span>
               </div>
-              <div className="flex items-center">
-                <MapPin className="w-4 h-4 mr-2" />
-                <span>Avenida das Descobertas 41 - Loja Esquerda<br> Infantado - Loures</br></span>
+              <div className="flex items-start">
+                <MapPin className="w-4 h-4 mr-2 mt-1" />
+                <div className="flex flex-col">
+                  <span>Avenida das Descobertas 41 - Loja Esquerda</span>
+                  <span>Infantado - Loures</span>
+                </div>
               </div>
             </div>
           </div>
