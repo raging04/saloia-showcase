@@ -18,8 +18,12 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Link to="/" className="text-2xl font-bold text-earth hover:text-earth/80 transition-colors">
-              Taberna Saloia
+            <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
+              <img 
+                src="/Logo_TabernaSaloia.svg" 
+                alt="Taberna Saloia" 
+                className="h-12 w-auto"
+              />
             </Link>
           </div>
 

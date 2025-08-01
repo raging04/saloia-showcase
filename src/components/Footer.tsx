@@ -7,7 +7,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Restaurant Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Taberna Saloia</h3>
+            <div className="mb-4">
+              <img 
+                src="/Logo_TabernaSaloia.svg" 
+                alt="Taberna Saloia" 
+                className="h-16 w-auto filter brightness-0 invert"
+              />
+            </div>
             <p className="text-earth-foreground/80 mb-4">
               Tradição e sabor autêntico da culinária portuguesa num ambiente familiar e acolhedor.
             </p>
