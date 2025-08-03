@@ -11,7 +11,7 @@ const Contact = () => {
             Contactos & Localização
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Visite-nos e desfrute de uma experiência gastronómica única
+            Venha visitar-nos no Infantado e descubra os sabores autênticos da nossa cozinha tradicional
           </p>
         </div>
 
@@ -105,18 +105,17 @@ const Contact = () => {
 
           {/* Map */}
           <div className="bg-card rounded-lg overflow-hidden shadow-lg">
-            <div className="h-96 bg-muted flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-12 h-12 text-earth mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-earth mb-2">
-                  Mapa Interativo
-                </h3>
-                <p className="text-muted-foreground">
-                  Encontre-nos facilmente no Infantado<br />
-                  em Loures, a poucos minutos de Lisboa
-                </p>
-              </div>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Avenida+das+Descobertas+41,+Infantado,+Loures,+Portugal"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Localização da Taberna Saloia"
+              className="w-full h-96"
+            />
           </div>
         </div>
       </div>

@@ -1,8 +1,18 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/IMG_1528_LowQ.png";
 import { FaUtensils, FaRegCalendarAlt } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    // Preload da imagem
+    const img = new Image();
+    img.onload = () => setImageLoaded(true);
+    img.src = heroImage;
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -15,11 +25,17 @@ const Hero = () => {
       id="inicio"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: `url(${heroImage})`,
+        backgroundImage: imageLoaded ? `url(${heroImage})` : 'none',
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundColor: imageLoaded ? 'transparent' : '#f5f5dc', // Cor de fallback
       }}
     >
+      {/* Loading placeholder */}
+      {!imageLoaded && (
+        <div className="absolute inset-0 bg-gradient-to-br from-cream to-warmth/20 animate-pulse" />
+      )}
+      
       {/* Overlay com gradiente e blur */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent backdrop-blur-sm z-0" />
       <div className="container mx-auto px-4 text-center text-white relative z-10 flex flex-col items-center justify-center py-24 animate-fade-in-up">
