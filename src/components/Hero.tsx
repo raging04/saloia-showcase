@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/IMG_1528.png";
+import heroImage from "@/assets/IMG_1528_LowQ.png";
 import { FaUtensils, FaRegCalendarAlt } from "react-icons/fa";
 
 const Hero = () => {
