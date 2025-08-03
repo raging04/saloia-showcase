@@ -27,9 +27,12 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-foreground">
-                  Rua da Tradição, 123<br />
-                  2500-456 Caldas da Rainha<br />
+                  Avenida das Descobertas 41 - Loja Esquerda<br />
+                  Infantado - Loures<br />
                   Portugal
+                </p>
+                <p className="text-muted-foreground text-sm mt-2">
+                  No coração do Infantado, em Loures
                 </p>
               </CardContent>
             </Card>
@@ -42,7 +45,7 @@ const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-foreground">+351 262 123 456</p>
+                <p className="text-foreground">+351 21 983 11 76</p>
                 <p className="text-muted-foreground text-sm mt-1">
                   Para reservas e informações
                 </p>
@@ -57,7 +60,10 @@ const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-foreground">geral@tabernasaloia.pt</p>
+                <p className="text-foreground">info@tabernasaloia.pt</p>
+                <p className="text-muted-foreground text-sm mt-1">
+                  Para reservas e eventos
+                </p>
               </CardContent>
             </Card>
 
@@ -71,16 +77,16 @@ const Contact = () => {
               <CardContent>
                 <div className="space-y-2">
                   <div className="flex justify-between">
-                    <span>Segunda a Quinta:</span>
+                    <span>Segunda a Sábado:</span>
                     <span>12:00 - 15:00 | 19:00 - 23:00</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span>Sexta e Sábado:</span>
-                    <span>12:00 - 15:00 | 19:00 - 24:00</span>
+                  <div className="flex justify-between text-muted-foreground">
+                    <span>Quarta-feira:</span>
+                    <span>Sem jantar</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span>Domingo:</span>
-                    <span>12:00 - 16:00</span>
+                  <div className="flex justify-between text-muted-foreground">
+                    <span>Domingo e Feriados:</span>
+                    <span>Encerrado</span>
                   </div>
                 </div>
               </CardContent>
@@ -90,6 +96,7 @@ const Contact = () => {
               <Button 
                 size="lg"
                 className="bg-earth text-earth-foreground hover:bg-earth/90 px-8 py-3"
+                onClick={() => window.open('tel:+351219831176', '_self')}
               >
                 Fazer Reserva
               </Button>
@@ -105,8 +112,8 @@ const Contact = () => {
                   Mapa Interativo
                 </h3>
                 <p className="text-muted-foreground">
-                  Encontre-nos facilmente no centro histórico<br />
-                  de Caldas da Rainha
+                  Encontre-nos facilmente no Infantado<br />
+                  em Loures, a poucos minutos de Lisboa
                 </p>
               </div>
             </div>
