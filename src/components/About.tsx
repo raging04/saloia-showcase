@@ -1,4 +1,4 @@
-import heroImage from "@/assets/hero-restaurant.jpg";
+import heroImage from "@/assets/IMG_1528.png";
 import { FaBookOpen, FaLeaf, FaHeart } from "react-icons/fa";
 
 const About = () => {
