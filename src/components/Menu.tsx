@@ -5,40 +5,206 @@ import { Download } from "lucide-react";
 const Menu = () => {
   const menuCategories = [
     {
-      title: "Entradas",
+      title: "COUVERT",
       items: [
-        { name: "Azeitonas marinadas", price: "4,50€" },
-        { name: "Queijo da Serra com doce", price: "8,50€" },
-        { name: "Chouriço assado", price: "7,00€" },
-        { name: "Alheira grelhada", price: "6,50€" }
+        { name: "Salpicão Porco Preto Misto", price: "5,50€" },
+        { name: "Queijo de Ovelha Amanteigado", price: "6,00€" },
+        { name: "Queijo de Ovelha", price: "5,00€" },
+        { name: "Presunto", price: "6,00€" },
+        { name: "Paté Caseiro", price: "3,50€" },
+        { name: "Queijo Seco", price: "3,50€" },
+        { name: "Requeijão c/ Doce de Abóbora", price: "6,50€" },
+        { name: "Queijo Fresco", price: "1,50€" },
+        { name: "Cesto de Pão", price: "1,20€" },
+        { name: "Azeitonas", price: "1,00€" },
+        { name: "Manteiga", price: "1,00€" }
       ]
     },
     {
-      title: "Sopas",
+      title: "PETISCOS",
       items: [
-        { name: "Canja de galinha", price: "5,50€" },
-        { name: "Sopa da pedra", price: "6,00€" },
-        { name: "Gaspacho", price: "5,00€" }
+        { name: "Amêijoa à Bulhão Pato", price: "12,50€" },
+        { name: "Pica-Pau de Novilho", price: "12,00€" },
+        { name: "Gambas à Guilho", price: "11,00€" },
+        { name: "Cogumelos Frescos c/ Mel e Vinho do Porto", price: "5,50€" },
+        { name: "Linguiça c/ Cogumelos", price: "5,00€" },
+        { name: "Morcela com Bacon", price: "5,00€" },
+        { name: "Ovos Mexidos c/ Farinheira", price: "5,00€" }
       ]
     },
     {
-      title: "Pratos Principais",
+      title: "PEIXE",
       items: [
-        { name: "Bacalhau à Brás", price: "16,50€" },
-        { name: "Leitão à Bairrada", price: "18,00€" },
-        { name: "Caldeirada de peixe", price: "19,50€" },
-        { name: "Cozido à portuguesa", price: "17,00€" },
-        { name: "Arroz de polvo", price: "15,50€" },
-        { name: "Bifana no prato", price: "12,00€" }
+        { 
+          name: "Cataplana de Peixe e Marisco (2px)", 
+          description: "A nossa seleção de peixes e marisco cozinhados lentamente na tradicional Cataplana",
+          price: "36,00€" 
+        },
+        { 
+          name: "Broa de Bacalhau (2px)", 
+          description: "Broa de Milho recheada com Bacalhau confitado em azeite e alho com Grelos e o miolo da Broa",
+          price: "28,00€" 
+        },
+        { 
+          name: "Bacalhau à Lagareiro", 
+          description: "Posta de Bacalhau Assada regada com Azeite quente e Alho acompanha Batata a Murro e Legumes",
+          price: "16,00€" 
+        },
+        { 
+          name: "Arroz de Tamboril c/ Gambas (1 PX)", 
+          description: "",
+          price: "14,00€" 
+        },
+        { 
+          name: "Arroz de Tamboril c/ Gambas (2Px)", 
+          description: "",
+          price: "26,00€" 
+        },
+        { 
+          name: "Garoupa Cozida ou Grelhada", 
+          description: "Posta de Garoupa acompanhada de Batata Cozida e Legumes",
+          price: "16,00€" 
+        },
+        { 
+          name: "Polvo à Lagareiro", 
+          description: "Acompanhado com Batata a Murro e Legumes",
+          price: "16,00€" 
+        },
+        { 
+          name: "Caril de Gambas", 
+          description: "",
+          price: "14,00€" 
+        },
+        { 
+          name: "Risotto de Gambas e Cogumelos Selvagens", 
+          description: "",
+          price: "14,00€" 
+        },
+        { 
+          name: "Salmão", 
+          description: "",
+          price: "12,00€" 
+        }
       ]
     },
     {
-      title: "Sobremesas",
+      title: "CARNE",
       items: [
-        { name: "Pastéis de nata", price: "3,50€" },
-        { name: "Pudim flan", price: "4,00€" },
-        { name: "Arroz doce", price: "4,50€" },
-        { name: "Leite creme", price: "4,00€" }
+        { 
+          name: "Tornedó do Lombo", 
+          description: "A carne mais nobre! Bife frito e mal passado. Com Molho de Mostarda",
+          price: "18,00€" 
+        },
+        { 
+          name: "Costeleta de Novilho", 
+          description: "",
+          price: "17,00€" 
+        },
+        { 
+          name: "Espetada de Vitela", 
+          description: "Com nacos de Vitela e Ananás, Recomenda-se Médio ou Mal Passada",
+          price: "14,50€" 
+        },
+        { 
+          name: "Bife à Portuguesa", 
+          description: "O Clássico! Bife da Vazia com molho tradicional, Presunto e Ovo Estrelado acompanhado de Batata Frita às rodelas",
+          price: "14,50€" 
+        },
+        { 
+          name: "Bife à Taberneiro", 
+          description: "Bife da Vazia frito com Molho de Natas e Ketchup e Ovo Estrelado. Acompanhado de Batata Frita",
+          price: "14,50€" 
+        },
+        { 
+          name: "Bife Grelhado", 
+          description: "Bife da Vazia Grelhado acompanhado de Batata Frita e Arroz",
+          price: "14,00€" 
+        },
+        { 
+          name: "Bife 3 Pimentas", 
+          description: "Bife da Vazia Frito com Molho de 3 Pimentas acompanhado de Batata Frita",
+          price: "14,00€" 
+        },
+        { 
+          name: "Bife Mostarda", 
+          description: "Bife da Vazia Frito com Molho de Mostarda acompanhado de Batata Frita",
+          price: "14,00€" 
+        },
+        { 
+          name: "Lombinhos Mel e Alecrim", 
+          description: "Lombinhos de Porco c/ Molho de Mel e Alecrim acompanhado de Batata Frita",
+          price: "13,50€" 
+        },
+        { 
+          name: "Lagartos de Porco Ibérico", 
+          description: "Tirinhas de Porco Ibérico Grelhadas c/ Batata Frita",
+          price: "13,50€" 
+        },
+        { 
+          name: "Francesinha", 
+          description: "",
+          price: "13,50€" 
+        },
+        { 
+          name: "Bitoque de Vitela", 
+          description: "Bife Frito, Ovo a Cavalo, Arroz e Batata Frita",
+          price: "10,00€" 
+        },
+        { 
+          name: "Bifinhos de Frango", 
+          description: "Grelhados ou Com Natas e Cogumelos",
+          price: "9,50€/10,50€" 
+        }
+      ]
+    },
+    {
+      title: "SUGESTÕES VEGETARIANAS",
+      items: [
+        { 
+          name: "Risotto", 
+          description: "",
+          price: "12,50€" 
+        },
+        { 
+          name: "Omelete de Legumes", 
+          description: "",
+          price: "9,00€" 
+        }
+      ]
+    },
+    {
+      title: "GUARNIÇÕES",
+      items: [
+        { 
+          name: "Dose de Legumes", 
+          description: "",
+          price: "2,50€" 
+        },
+        { 
+          name: "Salada Mista", 
+          description: "",
+          price: "2,50€" 
+        },
+        { 
+          name: "Dose de Arroz", 
+          description: "",
+          price: "2,50€" 
+        },
+        { 
+          name: "Dose de Batata Frita", 
+          description: "",
+          price: "2,50€" 
+        },
+        { 
+          name: "Sopa do Dia", 
+          description: "",
+          price: "1,50€" 
+        },
+        { 
+          name: "Ovo Estrelado", 
+          description: "",
+          price: "1,00€" 
+        }
       ]
     }
   ];
@@ -95,9 +261,16 @@ const Menu = () => {
               <CardContent>
                 <div className="space-y-4">
                   {category.items.map((item, itemIndex) => (
-                    <div key={itemIndex} className="flex justify-between items-center border-b border-border pb-2">
-                      <span className="text-foreground font-medium">{item.name}</span>
-                      <span className="text-earth font-semibold">{item.price}</span>
+                    <div key={itemIndex} className="border-b border-border pb-2">
+                      <div className="flex justify-between items-start">
+                        <div className="flex-1">
+                          <span className="text-foreground font-medium">{item.name}</span>
+                          {item.description && (
+                            <p className="text-sm text-muted-foreground mt-1">{item.description}</p>
+                          )}
+                        </div>
+                        <span className="text-earth font-semibold ml-4">{item.price}</span>
+                      </div>
                     </div>
                   ))}
                 </div>
