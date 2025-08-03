@@ -2,10 +2,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { FaPlay, FaEye } from "react-icons/fa";
-import portugueseDishes from "@/assets/portuguese-dishes.jpg";
-import seafoodPlatter from "@/assets/seafood-platter.jpg";
-import meatDishes from "@/assets/meat-dishes.jpg";
-import heroImage from "@/assets/IMG_1528.png";
 
 const DynamicGallery = () => {
   const galleryItems = [
@@ -13,70 +9,70 @@ const DynamicGallery = () => {
       id: 1,
       name: "Bacalhau em Crosta de Broa",
       description: "Bacalhau fresco coberto com crosta crocante de broa tradicional, acompanhado de batatas e legumes da época",
-      image: "/src/assets/0072B4EB-242A-4709-94EF-3F23D8B7CC62.JPG",
+      image: "/0072B4EB-242A-4709-94EF-3F23D8B7CC62.JPG",
       type: "image"
     },
     {
       id: 2,
       name: "A nossa casa",
       description: "O ambiente acolhedor da Taberna Saloia, onde cada refeição é um momento de partilha e tradição",
-      image: "/src/assets/IMG_1528.png",
+      image: "/IMG_1528.png",
       type: "image"
     },
     {
       id: 3,
       name: "A nossa Sala",
       description: "A sala principal da Taberna Saloia, decorada com elementos tradicionais portugueses e ambiente familiar",
-      image: "/src/assets/14572A16-3B9D-4074-BFEF-F9D28B74FD78.JPG",
+      image: "/14572A16-3B9D-4074-BFEF-F9D28B74FD78.JPG",
       type: "image"
     },
     {
       id: 4,
       name: "Um pijama de sobremesas",
       description: "Seleção de sobremesas tradicionais portuguesas, preparadas com carinho e ingredientes frescos",
-      image: "/src/assets/A27B192A-2E5A-41A4-879F-35E72BB0114E.JPG",
+      image: "/A27B192A-2E5A-41A4-879F-35E72BB0114E.JPG",
       type: "image"
     },
     {
       id: 5,
       name: "Cozido à Portuguesa",
       description: "O tradicional cozido português com carnes, enchidos e legumes, preparado com receita de família",
-      image: "/src/assets/9B7A8E8F-6562-45A4-A668-25DEB75548EC.JPG",
+      image: "/9B7A8E8F-6562-45A4-A668-25DEB75548EC.JPG",
       type: "image"
     },
     {
       id: 6,
       name: "Pica-Pau",
       description: "Pica-pau tradicional português, prato de carne picada com batatas fritas e molho caseiro",
-      image: "/src/assets/EA096665-7906-4935-8417-15E8E54F134D.JPG",
+      image: "/EA096665-7906-4935-8417-15E8E54F134D.JPG",
       type: "image"
     },
     {
       id: 7,
       name: "Bife 3 Pimentas",
       description: "Bife suculento temperado com três tipos de pimenta, acompanhado de arroz e legumes frescos",
-      image: "/src/assets/D597D731-6651-4F75-AD18-2C200020C075.JPG",
+      image: "/D597D731-6651-4F75-AD18-2C200020C075.JPG",
       type: "image"
     },
     {
       id: 8,
       name: "Dia dos Namorados 2023",
       description: "Celebração especial do Dia dos Namorados na Taberna Saloia, com ambiente romântico e menu especial",
-      image: "/src/assets/B8E1B1AE-6AFE-4976-9B2B-16506EB813B4.JPG",
+      image: "/B8E1B1AE-6AFE-4976-9B2B-16506EB813B4.JPG",
       type: "image"
     },
     {
       id: 9,
       name: "Caracoletas",
       description: "Caracoletas frescas do mar, servidas com molho caseiro e acompanhamentos tradicionais",
-      image: "/src/assets/6BEE5118-A2D5-4EA7-B0EF-AB840FDD1140.JPG",
+      image: "/6BEE5118-A2D5-4EA7-B0EF-AB840FDD1140.JPG",
       type: "image"
     },
     {
       id: 10,
       name: "Tornedó do Lombo",
       description: "Tornedó de lombo suculento, grelhado no ponto e servido com molho caseiro e acompanhamentos",
-      image: "/src/assets/DE9D01DD-3038-4F12-A9B1-C3F40B01AB79.JPG",
+      image: "/DE9D01DD-3038-4F12-A9B1-C3F40B01AB79.JPG",
       type: "image"
     }
   ];
