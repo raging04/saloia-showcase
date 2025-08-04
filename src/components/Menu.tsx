@@ -233,8 +233,13 @@ const Menu = () => {
   ];
 
   const handleDownload = (filename: string) => {
-    // Simulated download - in a real app, this would download the actual PDF
-    console.log(`Downloading ${filename}`);
+    // Download real do PDF
+    const link = document.createElement('a');
+    link.href = `/${filename}`;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
