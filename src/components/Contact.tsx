@@ -105,17 +105,24 @@ const Contact = () => {
 
           {/* Map */}
           <div className="bg-card rounded-lg overflow-hidden shadow-lg">
-            <iframe
-              src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Avenida+das+Descobertas+41,+Infantado,+Loures,+Portugal"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Localização da Taberna Saloia"
-              className="w-full h-96"
-            />
+            <div className="h-96 bg-muted flex items-center justify-center">
+              <div className="text-center p-6">
+                <MapPin className="w-12 h-12 text-earth mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-earth mb-2">
+                  Localização
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  Avenida das Descobertas 41 - Loja Esquerda<br />
+                  Infantado - Loures
+                </p>
+                <Button
+                  onClick={() => window.open('https://maps.google.com/?q=Avenida+das+Descobertas+41,+Infantado,+Loures,+Portugal', '_blank')}
+                  className="bg-earth text-earth-foreground hover:bg-earth/90"
+                >
+                  Ver no Google Maps
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
