@@ -5,7 +5,7 @@ import { Download } from "lucide-react";
 const Menu = () => {
   const menuCategories = [
     {
-      title: "COUVERT",
+      title: "Couvert",
       items: [
         { name: "Salpicão Porco Preto Misto", price: "5,50€" },
         { name: "Queijo de Ovelha Amanteigado", price: "6,00€" },
@@ -21,7 +21,7 @@ const Menu = () => {
       ]
     },
     {
-      title: "PETISCOS",
+      title: "Petiscos",
       items: [
         { name: "Amêijoa à Bulhão Pato", price: "12,50€" },
         { name: "Pica-Pau de Novilho", price: "12,00€" },
@@ -33,7 +33,7 @@ const Menu = () => {
       ]
     },
     {
-      title: "PEIXE",
+      title: "Peixe",
       items: [
         { 
           name: "Cataplana de Peixe e Marisco (2px)", 
@@ -51,14 +51,9 @@ const Menu = () => {
           price: "16,00€" 
         },
         { 
-          name: "Arroz de Tamboril c/ Gambas (1 PX)", 
+          name: "Arroz de Tamboril c/ Gambas", 
           description: "",
-          price: "14,00€" 
-        },
-        { 
-          name: "Arroz de Tamboril c/ Gambas (2Px)", 
-          description: "",
-          price: "26,00€" 
+          price: "14,00€ (1Px) | 26,00€ (2Px)" 
         },
         { 
           name: "Garoupa Cozida ou Grelhada", 
@@ -88,7 +83,7 @@ const Menu = () => {
       ]
     },
     {
-      title: "CARNE",
+      title: "Carne",
       items: [
         { 
           name: "Tornedó do Lombo", 
@@ -158,7 +153,7 @@ const Menu = () => {
       ]
     },
     {
-      title: "SUGESTÕES VEGETARIANAS",
+      title: "Sugestões Vegetarianas",
       items: [
         { 
           name: "Risotto", 
@@ -173,7 +168,7 @@ const Menu = () => {
       ]
     },
     {
-      title: "GUARNIÇÕES",
+      title: "Guarnições",
       items: [
         { 
           name: "Dose de Legumes", 
@@ -233,13 +228,20 @@ const Menu = () => {
   ];
 
   const handleDownload = (filename: string) => {
-    // Download real do PDF
-    const link = document.createElement('a');
-    link.href = `/${filename}`;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    try {
+      // Download real do PDF
+      const link = document.createElement('a');
+      link.href = `/${filename}`;
+      link.download = filename;
+      link.target = '_blank';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Erro ao fazer download:', error);
+      // Fallback: abrir em nova aba
+      window.open(`/${filename}`, '_blank');
+    }
   };
 
   return (
