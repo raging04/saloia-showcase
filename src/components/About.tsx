@@ -48,23 +48,23 @@ const About = () => {
           
           {/* Card de valores atravessando as duas colunas */}
           <div className="animate-fade-in-up">
-            <div className="bg-background/80 p-8 rounded-xl shadow-lg w-full">
-              <h3 className="text-2xl font-bold text-earth mb-6 font-serif text-center">Os Nossos Valores</h3>
-              <div className="grid grid-cols-3 gap-8 w-full">
-                <div className="text-center group hover:bg-cream/60 rounded-lg p-4 transition">
-                  <FaBookOpen className="w-8 h-8 text-earth mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                  <h4 className="font-semibold text-earth text-sm mb-2">Tradição Saloia</h4>
-                  <p className="text-muted-foreground text-xs">Inspirados nas raízes da região, preservamos os sabores autênticos</p>
+            <div className="bg-background/80 p-4 md:p-8 rounded-xl shadow-lg w-full">
+              <h3 className="text-xl md:text-2xl font-bold text-earth mb-4 md:mb-6 font-serif text-center">Os Nossos Valores</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 w-full">
+                <div className="text-center group hover:bg-cream/60 rounded-lg p-3 md:p-4 transition">
+                  <FaBookOpen className="w-6 h-6 md:w-8 md:h-8 text-earth mx-auto mb-2 md:mb-3 group-hover:scale-110 transition-transform" />
+                  <h4 className="font-semibold text-earth text-sm md:text-base mb-1 md:mb-2">Tradição Saloia</h4>
+                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">Inspirados nas raízes da região, preservamos os sabores autênticos</p>
                 </div>
-                <div className="text-center group hover:bg-cream/60 rounded-lg p-4 transition">
-                  <FaLeaf className="w-8 h-8 text-earth mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                  <h4 className="font-semibold text-earth text-sm mb-2">Casa & Família</h4>
-                  <p className="text-muted-foreground text-xs">Um espaço acolhedor onde cada refeição é um momento de partilha</p>
+                <div className="text-center group hover:bg-cream/60 rounded-lg p-3 md:p-4 transition">
+                  <FaLeaf className="w-6 h-6 md:w-8 md:h-8 text-earth mx-auto mb-2 md:mb-3 group-hover:scale-110 transition-transform" />
+                  <h4 className="font-semibold text-earth text-sm md:text-base mb-1 md:mb-2">Casa & Família</h4>
+                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">Um espaço acolhedor onde cada refeição é um momento de partilha</p>
                 </div>
-                <div className="text-center group hover:bg-cream/60 rounded-lg p-4 transition">
-                  <FaHeart className="w-8 h-8 text-earth mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                  <h4 className="font-semibold text-earth text-sm mb-2">Amizade</h4>
-                  <p className="text-muted-foreground text-xs">Mais do que um restaurante, somos uma taberna de amigos</p>
+                <div className="text-center group hover:bg-cream/60 rounded-lg p-3 md:p-4 transition">
+                  <FaHeart className="w-6 h-6 md:w-8 md:h-8 text-earth mx-auto mb-2 md:mb-3 group-hover:scale-110 transition-transform" />
+                  <h4 className="font-semibold text-earth text-sm md:text-base mb-1 md:mb-2">Amizade</h4>
+                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">Mais do que um restaurante, somos uma taberna de amigos</p>
                 </div>
               </div>
             </div>

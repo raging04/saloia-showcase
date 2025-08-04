@@ -43,14 +43,14 @@ const Hero = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-200">
           <Button
-            onClick={() => window.location.href = "/menu"}
+            onClick={() => window.location.href = "/ementa"}
             size="lg"
             className="bg-warmth text-earth hover:bg-warmth/90 text-lg px-8 py-3 shadow-lg transition-transform hover:-translate-y-1 flex items-center gap-2"
           >
             <FaUtensils className="inline-block mb-0.5" /> Ver Ementa
           </Button>
           <Button
-            onClick={() => window.location.href = "/contact"}
+            onClick={() => window.location.href = "/contactos"}
             variant="outline"
             size="lg"
             className="border-warmth text-earth bg-white/90 hover:bg-earth hover:text-white hover:border-earth text-lg px-8 py-3 shadow-lg transition-all duration-300 hover:-translate-y-1 flex items-center gap-2"
