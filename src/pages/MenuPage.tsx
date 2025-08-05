@@ -40,8 +40,7 @@ const MenuPage = () => {
         { name: "Cataplana de Peixe e Marisco (2px)", description: "A nossa seleção de peixes e marisco cozinhados lentamente na tradicional Cataplana", price: "36,00€" },
         { name: "Broa de Bacalhau (2px)", description: "Broa de Milho recheada com Bacalhau confitado em azeite e alho com Grelos e o miolo da Broa", price: "28,00€" },
         { name: "Bacalhau à Lagareiro", description: "Posta de Bacalhau Assada regada com Azeite quente e Alho acompanha Batata a Murro e Legumes", price: "16,00€" },
-        { name: "Arroz de Tamboril c/ Gambas (1 PX)", description: "", price: "14,00€" },
-        { name: "Arroz de Tamboril c/ Gambas (2Px)", description: "", price: "26,00€" },
+        { name: "Arroz de Tamboril c/ Gambas", description: "", price: "14,00€ (1Px) | 26,00€ (2Px)" },
         { name: "Garoupa Cozida ou Grelhada", description: "Posta de Garoupa acompanhada de Batata Cozida e Legumes", price: "16,00€" },
         { name: "Polvo à Lagareiro", description: "Acompanhado com Batata a Murro e Legumes", price: "16,00€" },
         { name: "Caril de Gambas", description: "", price: "14,00€" },
@@ -111,7 +110,20 @@ const MenuPage = () => {
   ];
 
   const handleDownload = (filename: string) => {
-    console.log(`Downloading ${filename}`);
+    try {
+      // Download real do PDF
+      const link = document.createElement('a');
+      link.href = `/${filename}`;
+      link.download = filename;
+      link.target = '_blank';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Erro ao fazer download:', error);
+      // Fallback: abrir em nova aba
+      window.open(`/${filename}`, '_blank');
+    }
   };
 
   return (
