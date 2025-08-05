@@ -7,7 +7,7 @@ import { Download } from "lucide-react";
 const MenuPage = () => {
   const dishCategories = [
     {
-      title: "COUVERT",
+      title: "Couvert",
       items: [
         { name: "Salpicão Porco Preto Misto", description: "", price: "5,50€" },
         { name: "Queijo de Ovelha Amanteigado", description: "", price: "6,00€" },
@@ -23,7 +23,7 @@ const MenuPage = () => {
       ]
     },
     {
-      title: "PETISCOS",
+      title: "Petiscos",
       items: [
         { name: "Amêijoa à Bulhão Pato", description: "", price: "12,50€" },
         { name: "Pica-Pau de Novilho", description: "", price: "12,00€" },
@@ -35,7 +35,7 @@ const MenuPage = () => {
       ]
     },
     {
-      title: "PEIXE",
+      title: "Peixe",
       items: [
         { name: "Cataplana de Peixe e Marisco (2px)", description: "A nossa seleção de peixes e marisco cozinhados lentamente na tradicional Cataplana", price: "36,00€" },
         { name: "Broa de Bacalhau (2px)", description: "Broa de Milho recheada com Bacalhau confitado em azeite e alho com Grelos e o miolo da Broa", price: "28,00€" },
@@ -50,7 +50,7 @@ const MenuPage = () => {
       ]
     },
     {
-      title: "CARNE",
+      title: "Carne",
       items: [
         { name: "Tornedó do Lombo", description: "A carne mais nobre! Bife frito e mal passado. Com Molho de Mostarda", price: "18,00€" },
         { name: "Costeleta de Novilho", description: "", price: "17,00€" },
@@ -68,14 +68,14 @@ const MenuPage = () => {
       ]
     },
     {
-      title: "SUGESTÕES VEGETARIANAS",
+      title: "Sugestões Vegetarianas",
       items: [
         { name: "Risotto", description: "", price: "12,50€" },
         { name: "Omelete de Legumes", description: "", price: "9,00€" }
       ]
     },
     {
-      title: "GUARNIÇÕES",
+      title: "Guarnições",
       items: [
         { name: "Dose de Legumes", description: "", price: "2,50€" },
         { name: "Salada Mista", description: "", price: "2,50€" },

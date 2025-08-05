@@ -21,25 +21,6 @@ const Contact = () => {
             <Card className="bg-card shadow-lg">
               <CardHeader>
                 <CardTitle className="text-2xl text-earth flex items-center">
-                  <MapPin className="w-6 h-6 mr-2" />
-                  Localização
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-foreground">
-                  Avenida das Descobertas 41 - Loja Esquerda<br />
-                  Infantado - Loures<br />
-                  Portugal
-                </p>
-                <p className="text-muted-foreground text-sm mt-2">
-                  No coração do Infantado, em Loures
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card shadow-lg">
-              <CardHeader>
-                <CardTitle className="text-2xl text-earth flex items-center">
                   <Phone className="w-6 h-6 mr-2" />
                   Telefone
                 </CardTitle>
@@ -103,19 +84,41 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Map */}
-          <div className="bg-card rounded-lg overflow-hidden shadow-lg">
-            <iframe
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC6ow3CU3JLF93thhXYyXQ0KzvMWTGFp_0&q=Av.+Descobertas+n%C2%B0+41+Loja+esquerda,+2670-384+Loures,+Portugal"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Localização da Taberna Saloia"
-              className="w-full h-96"
-            />
+          {/* Map Column */}
+          <div className="space-y-6">
+            <Card className="bg-card shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-2xl text-earth flex items-center">
+                  <MapPin className="w-6 h-6 mr-2" />
+                  Localização
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-foreground">
+                  Av. Descobertas n° 41 Loja esquerda<br />
+                  2670-384 Loures<br />
+                  Portugal
+                </p>
+                <p className="text-muted-foreground text-sm mt-2">
+                  No coração do Infantado, em Loures
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Map */}
+            <div className="bg-card rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC6ow3CU3JLF93thhXYyXQ0KzvMWTGFp_0&q=Av.+Descobertas+n%C2%B0+41+Loja+esquerda,+2670-384+Loures,+Portugal"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localização da Taberna Saloia"
+                className="w-full h-96"
+              />
+            </div>
           </div>
         </div>
       </div>
