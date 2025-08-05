@@ -63,7 +63,7 @@ const Contact = () => {
                   </div>
                   <div className="flex justify-between text-muted-foreground">
                     <span>Quarta-feira:</span>
-                    <span>Sem jantar</span>
+                    <span>Encerrado ao jantar</span>
                   </div>
                   <div className="flex justify-between text-muted-foreground">
                     <span>Domingo e Feriados:</span>
