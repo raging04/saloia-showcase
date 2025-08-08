@@ -74,6 +74,20 @@ const DynamicGallery = () => {
       description: "Tornedó de lombo suculento, grelhado no ponto e servido com molho caseiro e acompanhamentos",
       image: "/DE9D01DD-3038-4F12-A9B1-C3F40B01AB79.JPG",
       type: "image"
+    },
+    {
+      id: 11,
+      name: "Feijoada à Transmontana",
+      description: "Feijoada tradicional transmontana com feijão preto, carnes de porco e enchidos regionais, cozinhada lentamente com temperos caseiros e servida com arroz e couve",
+      image: "/09229FB3-4103-4DDF-BC52-B80F09D65950.JPG",
+      type: "image"
+    },
+    {
+      id: 12,
+      name: "Feijoada de Choco",
+      description: "Feijoada de choco tradicional algarvia, preparada com choco fresco, feijão branco e temperos regionais, cozinhada lentamente até ficar cremosa e servida com arroz",
+      image: "/D9879CBE-7B70-410B-86D7-6F7C905292B6.JPG",
+      type: "image"
     }
   ];
 
