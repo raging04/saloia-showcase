@@ -219,13 +219,6 @@ const DynamicGallery = () => {
                       className="w-full h-96 object-cover rounded-lg"
                     />
                   )}
-                  {item.type === "video" && (
-                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                      <div className="bg-black/50 rounded-full p-6">
-                        <FaPlay className="w-12 h-12 text-white" />
-                      </div>
-                    </div>
-                  )}
                 </div>
                 <div className="mt-6">
                   <h3 className="text-2xl font-semibold text-earth mb-2">
