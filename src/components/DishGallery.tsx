@@ -200,13 +200,25 @@ const DynamicGallery = () => {
               
               <DialogContent className="max-w-4xl">
                 <div className="relative">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-full h-96 object-cover rounded-lg"
-                  />
+                  {item.type === "video" ? (
+                    <video
+                      src={item.image}
+                      className="w-full h-96 object-cover rounded-lg"
+                      autoPlay
+                      loop
+                      muted
+                      controls
+                      playsInline
+                    />
+                  ) : (
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-full h-96 object-cover rounded-lg"
+                    />
+                  )}
                   {item.type === "video" && (
-                    <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                       <div className="bg-black/50 rounded-full p-6">
                         <FaPlay className="w-12 h-12 text-white" />
                       </div>
