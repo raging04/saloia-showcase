@@ -50,7 +50,7 @@ const DynamicGallery = () => {
     {
       id: 7,
       name: "Bife 3 Pimentas",
-      description: "Bife suculento temperado com três tipos de pimenta, acompanhado de arroz e legumes frescos",
+      description: "Bife suculento temperado com três tipos de pimenta, acompanhado de batata frita",
       image: "/D597D731-6651-4F75-AD18-2C200020C075.JPG",
       type: "image"
     },
@@ -71,22 +71,78 @@ const DynamicGallery = () => {
     {
       id: 10,
       name: "Tornedó do Lombo",
-      description: "Tornedó de lombo suculento, grelhado no ponto e servido com molho caseiro e acompanhamentos",
+      description: "Tornedó de lombo suculento, grelhado no ponto e servido com molho caseiro e batata frita",
       image: "/DE9D01DD-3038-4F12-A9B1-C3F40B01AB79.JPG",
       type: "image"
     },
     {
       id: 11,
       name: "Feijoada à Transmontana",
-      description: "Feijoada tradicional transmontana com feijão preto, carnes de porco e enchidos regionais, cozinhada lentamente com temperos caseiros e servida com arroz e couve",
+      description: "Feijoada tradicional transmontana com feijão, carnes de porco e enchidos regionais, servida com arroz e couve",
       image: "/09229FB3-4103-4DDF-BC52-B80F09D65950.JPG",
       type: "image"
     },
     {
       id: 12,
       name: "Feijoada de Choco",
-      description: "Feijoada de choco tradicional algarvia, preparada com choco fresco, feijão branco e temperos regionais, cozinhada lentamente até ficar cremosa e servida com arroz",
+      description: "Feijoada de choco, preparada com choco fresco, feijão branco e temperos regionais",
       image: "/D9879CBE-7B70-410B-86D7-6F7C905292B6.JPG",
+      type: "image"
+    },
+    {
+      id: 13,
+      name: "Pernil Assado no Forno",
+      description: "Pernil assado no forno, especialidade da casa, cozinhado lentamente com temperos caseiros até ficar tenro e suculento, servido com batatas assadas e legumes",
+      image: "/448fb5f8-1c51-40d9-9327-0f43c46aa094.MP4",
+      type: "video"
+    },
+    {
+      id: 14,
+      name: "Francesinha, Empada de Perdiz e Bifinho Grelhado",
+      description: "Três pratos da nossa cozinha: Francesinha tradicional com molho caseiro, Empada de Perdiz recheada com carne de caça, e Bifinho Grelhado no ponto com acompanhamentos",
+      image: "/WhatsApp Image 2025-05-04 at 18.22.43.jpeg",
+      type: "image"
+    },
+    {
+      id: 15,
+      name: "Arroz de Marisco",
+      description: "Arroz de marisco, preparado com arroz carolino.",
+      image: "/0260A2E3-D647-4DB5-834F-2C4CEE01A1CD_4_5005_c.jpeg",
+      type: "image"
+    },
+    {
+      id: 16,
+      name: "Risotto de Gambas e Cogumelos Selvagens",
+      description: "Risotto cremoso italiano preparado com gambas frescas, cogumelos selvagens da época e arroz arborio, finalizado com queijo parmesão e ervas aromáticas",
+      image: "/d6f07f81-ab22-4cf0-83ae-aa985cdae672.JPG",
+      type: "image"
+    },
+    {
+      id: 17,
+      name: "Polvo à Lagareiro",
+      description: "Polvo à Lagareiro tradicional português, cozinhado lentamente até ficar tenro, servido com batatas a murro, legumes e regado com azeite quente e alho",
+      image: "/0db4598d-2744-4d6c-a0fb-c96a46aad08e.JPG",
+      type: "image"
+    },
+    {
+      id: 18,
+      name: "CR&F Reserva Extra",
+      description: "Vinho CR&F Reserva Extra, uma seleção especial.",
+      image: "/25cb02fe-e907-4af7-9d13-37aac952ff01.JPG",
+      type: "image"
+    },
+    {
+      id: 19,
+      name: "O nosso espaço",
+      description: "O ambiente acolhedor e familiar da Taberna Saloia",
+      image: "/9479cd12-05ea-4abe-85cd-d663b3277583.JPG",
+      type: "image"
+    },
+    {
+      id: 20,
+      name: "Ensopado de Borrego",
+      description: "Ensopado de borrego tradicional, carne tenra servido com batatas e pão tostado",
+      image: "/64a3fc78-b7ec-42e0-92b0-e7488a177a4b.JPG",
       type: "image"
     }
   ];
