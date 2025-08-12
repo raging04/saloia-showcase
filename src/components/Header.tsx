@@ -6,10 +6,41 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [testMode, setTestMode] = useState(false);
+  const [testStatus, setTestStatus] = useState("open");
   const location = useLocation();
 
   // Função para determinar o status do restaurante
   const getRestaurantStatus = () => {
+    // Modo de teste
+    if (testMode) {
+      if (testStatus === "open") {
+        return {
+          status: "open",
+          message: "Estamos abertos agora",
+          nextOpening: "Fechamos às 23:00",
+          color: "bg-green-500",
+          pulseColor: "bg-green-500"
+        };
+      } else if (testStatus === "closed") {
+        return {
+          status: "closed",
+          message: "Fechado",
+          nextOpening: "Abrimos às 12:00",
+          color: "bg-red-500",
+          pulseColor: "bg-red-500"
+        };
+      } else if (testStatus === "vacation") {
+        return {
+          status: "vacation",
+          message: "Estamos de férias",
+          nextOpening: "Voltamos em breve",
+          color: "bg-yellow-500",
+          pulseColor: "bg-yellow-500"
+        };
+      }
+    }
+
     const now = new Date();
     const currentHour = now.getHours();
     const currentDay = now.getDay(); // 0 = Domingo, 1 = Segunda, etc.
@@ -74,6 +105,12 @@ const Header = () => {
 
   const restaurantStatus = getRestaurantStatus();
 
+  const toggleTestStatus = () => {
+    if (testStatus === "open") setTestStatus("closed");
+    else if (testStatus === "closed") setTestStatus("vacation");
+    else setTestStatus("open");
+  };
+
   const menuItems = [
     { name: "Início", href: "/" },
     { name: "Ementa", href: "/ementa" },
@@ -115,15 +152,19 @@ const Header = () => {
                   <div className={`flex items-center space-x-2 cursor-pointer backdrop-blur-sm border rounded-full px-3 py-2 hover:transition-all duration-300 shadow-lg ${
                     restaurantStatus.status === "open" 
                       ? "bg-green-800/90 border-green-600/30 hover:bg-green-800" 
+                      : restaurantStatus.status === "vacation"
+                      ? "bg-yellow-700/90 border-yellow-500/30 hover:bg-yellow-700"
                       : "bg-red-800/90 border-red-600/30 hover:bg-red-800"
                   }`}>
                     <div className={`w-2.5 h-2.5 rounded-full ${
                       restaurantStatus.status === "open" 
                         ? "bg-green-400 animate-pulse" 
+                        : restaurantStatus.status === "vacation"
+                        ? "bg-yellow-300"
                         : "bg-red-300"
                     }`} />
                     <span className="text-sm font-medium text-white">
-                      {restaurantStatus.status === "open" ? "Aberto" : "Fechado"}
+                      {restaurantStatus.status === "open" ? "Aberto" : restaurantStatus.status === "vacation" ? "Férias" : "Fechado"}
                     </span>
                   </div>
                 </TooltipTrigger>
@@ -143,6 +184,30 @@ const Header = () => {
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
+
+            {/* Test Button */}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => {
+                setTestMode(!testMode);
+                if (!testMode) setTestStatus("open");
+              }}
+              className="text-xs text-muted-foreground hover:text-foreground"
+            >
+              {testMode ? "Teste ON" : "Teste"}
+            </Button>
+            
+            {testMode && (
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={toggleTestStatus}
+                className="text-xs border-yellow-500 text-yellow-600 hover:bg-yellow-500 hover:text-white"
+              >
+                {testStatus === "open" ? "🟢" : testStatus === "closed" ? "🔴" : "🟡"}
+              </Button>
+            )}
           </nav>
 
           {/* Mobile Menu Button */}
@@ -178,15 +243,19 @@ const Header = () => {
                 <div className={`flex items-center space-x-2 backdrop-blur-sm border rounded-full px-3 py-2 ${
                   restaurantStatus.status === "open" 
                     ? "bg-green-800/90 border-green-600/30" 
+                    : restaurantStatus.status === "vacation"
+                    ? "bg-yellow-700/90 border-yellow-500/30"
                     : "bg-red-800/90 border-red-600/30"
                 }`}>
                   <div className={`w-2.5 h-2.5 rounded-full ${
                     restaurantStatus.status === "open" 
                       ? "bg-green-400 animate-pulse" 
+                      : restaurantStatus.status === "vacation"
+                      ? "bg-yellow-300"
                       : "bg-red-300"
                   }`} />
                   <span className="text-sm font-medium text-white">
-                    {restaurantStatus.status === "open" ? "Aberto" : "Fechado"}
+                    {restaurantStatus.status === "open" ? "Aberto" : restaurantStatus.status === "vacation" ? "Férias" : "Fechado"}
                   </span>
                 </div>
                 <span className="text-xs text-muted-foreground ml-2">
