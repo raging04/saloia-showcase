@@ -112,13 +112,17 @@ const Header = () => {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <div className="flex items-center space-x-2 cursor-pointer">
-                    <div className={`w-3 h-3 rounded-full ${restaurantStatus.color} ${
-                      restaurantStatus.status === "open" ? "animate-pulse" : ""
+                  <div className={`flex items-center space-x-2 cursor-pointer backdrop-blur-sm border rounded-full px-3 py-2 hover:transition-all duration-300 shadow-lg ${
+                    restaurantStatus.status === "open" 
+                      ? "bg-green-800/90 border-green-600/30 hover:bg-green-800" 
+                      : "bg-red-800/90 border-red-600/30 hover:bg-red-800"
+                  }`}>
+                    <div className={`w-2.5 h-2.5 rounded-full ${
+                      restaurantStatus.status === "open" 
+                        ? "bg-green-400 animate-pulse" 
+                        : "bg-red-300"
                     }`} />
-                    <span className={`text-sm font-medium ${
-                      restaurantStatus.status === "open" ? "text-green-600" : "text-red-600"
-                    }`}>
+                    <span className="text-sm font-medium text-white">
                       {restaurantStatus.status === "open" ? "Aberto" : "Fechado"}
                     </span>
                   </div>
@@ -171,14 +175,20 @@ const Header = () => {
               
               {/* Mobile Status Indicator */}
               <div className="flex items-center space-x-2 pt-2 border-t border-border">
-                <div className={`w-3 h-3 rounded-full ${restaurantStatus.color} ${
-                  restaurantStatus.status === "open" ? "animate-pulse" : ""
-                }`} />
-                <span className={`text-sm font-medium ${
-                  restaurantStatus.status === "open" ? "text-green-600" : "text-red-600"
+                <div className={`flex items-center space-x-2 backdrop-blur-sm border rounded-full px-3 py-2 ${
+                  restaurantStatus.status === "open" 
+                    ? "bg-green-800/90 border-green-600/30" 
+                    : "bg-red-800/90 border-red-600/30"
                 }`}>
-                  {restaurantStatus.status === "open" ? "Aberto" : "Fechado"}
-                </span>
+                  <div className={`w-2.5 h-2.5 rounded-full ${
+                    restaurantStatus.status === "open" 
+                      ? "bg-green-400 animate-pulse" 
+                      : "bg-red-300"
+                  }`} />
+                  <span className="text-sm font-medium text-white">
+                    {restaurantStatus.status === "open" ? "Aberto" : "Fechado"}
+                  </span>
+                </div>
                 <span className="text-xs text-muted-foreground ml-2">
                   {restaurantStatus.message}
                 </span>
