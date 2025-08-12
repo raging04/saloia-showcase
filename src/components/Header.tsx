@@ -250,13 +250,10 @@ const Header = () => {
               <DialogContent className="bg-background border border-border p-4 max-w-xs mx-4">
                 <div className="text-center">
                   <h3 className="font-semibold text-earth mb-2">
-                    Status do Restaurante
+                    {restaurantStatus.message}
                   </h3>
                   <p className="font-semibold text-earth mb-2">
-                    {restaurantStatus.message}
-                  </p>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    Próxima abertura: {restaurantStatus.nextOpening}
+                    {restaurantStatus.nextOpening}
                   </p>
                   <div className="text-xs text-muted-foreground space-y-1">
                     <p>Seg-Sáb: 12:00-15:00 | 19:00-23:00</p>
