@@ -46,7 +46,7 @@ const Header = () => {
     const currentHour = now.getHours();
     const currentDay = now.getDay(); // 0 = Domingo, 1 = Segunda, etc.
     
-    // Verificar se é domingo ou feriado (encerrado)
+    // Verificar se é domingo 
     if (currentDay === 0) {
       return {
         status: "closed",
@@ -194,7 +194,12 @@ const Header = () => {
                     </span>
                   </div>
                 </TooltipTrigger>
-                <TooltipContent className="bg-background border border-border p-3 max-w-xs">
+                <TooltipContent 
+                  className="bg-background border border-border p-3 max-w-xs" 
+                  side="bottom"
+                  align="end"
+                  sideOffset={8}
+                >
                   <div className="text-center">
                     <p className="font-semibold text-earth mb-1">
                       {restaurantStatus.message}
