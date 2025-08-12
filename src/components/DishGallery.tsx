@@ -168,21 +168,23 @@ const DynamicGallery = () => {
                   className="group overflow-hidden bg-card hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 cursor-pointer"
                 >
                   <div className="relative overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    
-                    {/* Ícone de vídeo */}
-                    {item.type === "video" && (
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="bg-black/50 rounded-full p-4">
-                          <FaPlay className="w-8 h-8 text-white" />
-                        </div>
-                      </div>
+                    {item.type === "video" ? (
+                      <video
+                        src={item.image}
+                        className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      />
+                    ) : (
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
                     )}
-
+                    
                     {/* Overlay dinâmico no hover */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
                       <div className="p-6 w-full">
