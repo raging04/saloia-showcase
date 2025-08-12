@@ -84,7 +84,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Horário</h4>
             <div className="space-y-1 text-earth-foreground/80 text-sm">
               <p>Seg-Sáb (Exceto quarta-feira ao jantar): 12:00-15:00 | 19:00-23:00</p>
-              <p>Estamos encerrados nos dias de domingo e feriados.</p>
+              <p>Estamos encerrados aos domingos.</p>
             </div>
           </div>
         </div>
