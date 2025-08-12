@@ -64,7 +64,7 @@ const DynamicGallery = () => {
     {
       id: 9,
       name: "Caracoletas",
-      description: "Caracoletas frescas do mar, servidas com molho caseiro e acompanhamentos tradicionais",
+      description: "Caracoletas da região saloia de Loures, servidas com molho caseiro e acompanhamentos tradicionais",
       image: "/6BEE5118-A2D5-4EA7-B0EF-AB840FDD1140.JPG",
       type: "image"
     },
