@@ -247,7 +247,7 @@ const Header = () => {
                   </div>
                 </div>
               </DialogTrigger>
-              <DialogContent className="bg-background border border-border p-4 max-w-xs mx-4">
+              <DialogContent className="bg-background border border-border p-4 max-w-xs mx-auto">
                 <div className="text-center">
                   <h3 className="font-semibold text-earth mb-2">
                     {restaurantStatus.message}
