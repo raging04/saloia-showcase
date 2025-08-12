@@ -8,6 +8,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [testMode, setTestMode] = useState(false);
   const [testStatus, setTestStatus] = useState("open");
+  const [showStatusTooltip, setShowStatusTooltip] = useState(false);
   const location = useLocation();
 
   // Função para determinar o status do restaurante
@@ -129,6 +130,28 @@ const Header = () => {
                 className="h-12 w-auto"
               />
             </Link>
+            
+            {/* Mobile Status Indicator */}
+            <div className="md:hidden flex items-center space-x-2">
+              <div className={`flex items-center space-x-2 backdrop-blur-sm border rounded-full px-2 py-1 ${
+                restaurantStatus.status === "open" 
+                  ? "bg-green-800/90 border-green-600/30" 
+                  : restaurantStatus.status === "vacation"
+                  ? "bg-yellow-700/90 border-yellow-500/30"
+                  : "bg-red-800/90 border-red-600/30"
+              }`}>
+                <div className={`w-2 h-2 rounded-full ${
+                  restaurantStatus.status === "open" 
+                    ? "bg-green-400 animate-pulse" 
+                    : restaurantStatus.status === "vacation"
+                    ? "bg-yellow-300"
+                    : "bg-red-300"
+                }`} />
+                <span className="text-xs font-medium text-white">
+                  {restaurantStatus.status === "open" ? "Aberto" : restaurantStatus.status === "vacation" ? "Férias" : "Fechado"}
+                </span>
+              </div>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
@@ -147,15 +170,18 @@ const Header = () => {
             
             {/* Status Indicator */}
             <TooltipProvider>
-              <Tooltip>
+              <Tooltip open={showStatusTooltip} onOpenChange={setShowStatusTooltip}>
                 <TooltipTrigger asChild>
-                  <div className={`flex items-center space-x-2 cursor-pointer backdrop-blur-sm border rounded-full px-3 py-2 hover:transition-all duration-300 shadow-lg ${
-                    restaurantStatus.status === "open" 
-                      ? "bg-green-800/90 border-green-600/30 hover:bg-green-800" 
-                      : restaurantStatus.status === "vacation"
-                      ? "bg-yellow-700/90 border-yellow-500/30 hover:bg-yellow-700"
-                      : "bg-red-800/90 border-red-600/30 hover:bg-red-800"
-                  }`}>
+                  <div 
+                    className={`flex items-center space-x-2 cursor-pointer backdrop-blur-sm border rounded-full px-3 py-2 hover:transition-all duration-300 shadow-lg ${
+                      restaurantStatus.status === "open" 
+                        ? "bg-green-800/90 border-green-600/30 hover:bg-green-800" 
+                        : restaurantStatus.status === "vacation"
+                        ? "bg-yellow-700/90 border-yellow-500/30 hover:bg-yellow-700"
+                        : "bg-red-800/90 border-red-600/30 hover:bg-red-800"
+                    }`}
+                    onClick={() => setShowStatusTooltip(!showStatusTooltip)}
+                  >
                     <div className={`w-2.5 h-2.5 rounded-full ${
                       restaurantStatus.status === "open" 
                         ? "bg-green-400 animate-pulse" 
@@ -237,31 +263,6 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              
-              {/* Mobile Status Indicator */}
-              <div className="flex items-center space-x-2 pt-2 border-t border-border">
-                <div className={`flex items-center space-x-2 backdrop-blur-sm border rounded-full px-3 py-2 ${
-                  restaurantStatus.status === "open" 
-                    ? "bg-green-800/90 border-green-600/30" 
-                    : restaurantStatus.status === "vacation"
-                    ? "bg-yellow-700/90 border-yellow-500/30"
-                    : "bg-red-800/90 border-red-600/30"
-                }`}>
-                  <div className={`w-2.5 h-2.5 rounded-full ${
-                    restaurantStatus.status === "open" 
-                      ? "bg-green-400 animate-pulse" 
-                      : restaurantStatus.status === "vacation"
-                      ? "bg-yellow-300"
-                      : "bg-red-300"
-                  }`} />
-                  <span className="text-sm font-medium text-white">
-                    {restaurantStatus.status === "open" ? "Aberto" : restaurantStatus.status === "vacation" ? "Férias" : "Fechado"}
-                  </span>
-                </div>
-                <span className="text-xs text-muted-foreground ml-2">
-                  {restaurantStatus.message}
-                </span>
-              </div>
             </div>
           </nav>
         )}
