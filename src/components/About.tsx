@@ -28,20 +28,26 @@ const About = () => {
                 </p>
               </div>
             </div>
-            {/* Imagem ilustrativa */}
+            {/* Vídeo ilustrativo */}
             <div className="hidden md:block animate-fade-in-left">
-              <img
-                src={heroImage}
-                alt="Interior da Taberna Saloia"
+              <video
+                src="/Teaser_sSom.mov"
                 className="rounded-2xl shadow-2xl object-cover w-full h-96 border-4 border-earth/10"
+                autoPlay
+                loop
+                muted
+                playsInline
               />
             </div>
-            {/* Imagem mobile */}
+            {/* Vídeo mobile */}
             <div className="md:hidden mb-8 animate-fade-in-up">
-              <img
-                src={heroImage}
-                alt="Interior da Taberna Saloia"
+              <video
+                src="/Teaser_sSom.mov"
                 className="rounded-2xl shadow-2xl object-cover w-full h-64 border-4 border-earth/10"
+                autoPlay
+                loop
+                muted
+                playsInline
               />
             </div>
           </div>
