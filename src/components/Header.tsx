@@ -7,111 +7,24 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [testMode, setTestMode] = useState(false);
-  const [testStatus, setTestStatus] = useState("open");
   const [showStatusTooltip, setShowStatusTooltip] = useState(false);
   const location = useLocation();
 
   // Função para determinar o status do restaurante
   const getRestaurantStatus = () => {
-    // Modo de teste
-    if (testMode) {
-      if (testStatus === "open") {
-        return {
-          status: "open",
-          message: "Estamos abertos agora",
-          nextOpening: "Fechamos às 23:00",
-          color: "bg-green-500",
-          pulseColor: "bg-green-500"
-        };
-      } else if (testStatus === "closed") {
-        return {
-          status: "closed",
-          message: "Fechado",
-          nextOpening: "Abrimos às 12:00",
-          color: "bg-red-500",
-          pulseColor: "bg-red-500"
-        };
-      } else if (testStatus === "vacation") {
-        return {
-          status: "vacation",
-          message: "Estamos de férias",
-          nextOpening: "Voltamos em breve",
-          color: "bg-yellow-500",
-          pulseColor: "bg-yellow-500"
-        };
-      }
-    }
-
-    const now = new Date();
-    const currentHour = now.getHours();
-    const currentDay = now.getDay(); // 0 = Domingo, 1 = Segunda, etc.
-    
-    // Verificar se é domingo 
-    if (currentDay === 0) {
-      return {
-        status: "closed",
-        message: "Encerrado aos domingos",
-        nextOpening: "Amanhã às 12:00",
-        color: "bg-red-500",
-        pulseColor: "bg-red-500"
-      };
-    }
-    
-    // Verificar se é quarta-feira (sem jantar)
-    if (currentDay === 3 && currentHour >= 19) {
-      return {
-        status: "closed",
-        message: "Encerrado ao jantar às quartas-feiras",
-        nextOpening: "Amanhã às 12:00",
-        color: "bg-red-500",
-        pulseColor: "bg-red-500"
-      };
-    }
-    
-    // Verificar horário de funcionamento
-    if (currentHour >= 12 && currentHour < 15) {
-      return {
-        status: "open",
-        message: "Estamos abertos agora",
-        nextOpening: "Fechamos às 15:00",
-        color: "bg-green-500",
-        pulseColor: "bg-green-500"
-      };
-    } else if (currentHour >= 19 && currentHour < 23) {
-      return {
-        status: "open",
-        message: "Estamos abertos agora",
-        nextOpening: "Fechamos às 23:00",
-        color: "bg-green-500",
-        pulseColor: "bg-green-500"
-      };
-    } else if (currentHour >= 15 && currentHour < 19) {
-      return {
-        status: "closed",
-        message: "Fechado para almoço",
-        nextOpening: "Abrimos às 19:00",
-        color: "bg-red-500",
-        pulseColor: "bg-red-500"
-      };
-    } else {
-      return {
-        status: "closed",
-        message: "Fechado",
-        nextOpening: "Abrimos às 12:00",
-        color: "bg-red-500",
-        pulseColor: "bg-red-500"
-      };
-    }
+    // Estado de férias até dia 7 de setembro
+    return {
+      status: "vacation",
+      message: "Estamos de férias",
+      nextOpening: "Voltamos dia 7 de Setembro",
+      color: "bg-yellow-500",
+      pulseColor: "bg-yellow-500"
+    };
   };
 
   const restaurantStatus = getRestaurantStatus();
 
-  const toggleTestStatus = () => {
-    if (testStatus === "open") setTestStatus("closed");
-    else if (testStatus === "closed") setTestStatus("vacation");
-    else setTestStatus("open");
-  };
+
 
   const menuItems = [
     { name: "Início", href: "/" },
@@ -196,29 +109,7 @@ const Header = () => {
               </Tooltip>
             </TooltipProvider>
 
-            {/* Test Button */}
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => {
-                setTestMode(!testMode);
-                if (!testMode) setTestStatus("open");
-              }}
-              className="text-xs text-muted-foreground hover:text-foreground"
-            >
-              {testMode ? "Teste ON" : "Teste"}
-            </Button>
-            
-            {testMode && (
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={toggleTestStatus}
-                className="text-xs border-yellow-500 text-yellow-600 hover:bg-yellow-500 hover:text-white"
-              >
-                {testStatus === "open" ? "🟢" : testStatus === "closed" ? "🔴" : "🟡"}
-              </Button>
-            )}
+
           </nav>
 
           {/* Mobile Menu Button */}
