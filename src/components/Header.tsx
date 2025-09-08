@@ -12,14 +12,66 @@ const Header = () => {
 
   // Função para determinar o status do restaurante
   const getRestaurantStatus = () => {
-    // Estado de férias até dia 7 de setembro
-    return {
-      status: "vacation",
-      message: "Estamos de férias",
-      nextOpening: "Voltamos dia 7 de Setembro",
-      color: "bg-yellow-500",
-      pulseColor: "bg-yellow-500"
-    };
+    const now = new Date();
+    const currentHour = now.getHours();
+    const currentDay = now.getDay(); // 0 = Domingo, 1 = Segunda, etc.
+
+    // Domingo: encerrado todo o dia
+    if (currentDay === 0) {
+      return {
+        status: "closed",
+        message: "Encerrado aos domingos",
+        nextOpening: "Amanhã às 12:00",
+        color: "bg-red-500",
+        pulseColor: "bg-red-500"
+      };
+    }
+
+    // Quarta-feira sem jantar a partir das 19:00
+    if (currentDay === 3 && currentHour >= 19) {
+      return {
+        status: "closed",
+        message: "Encerrado ao jantar às quartas-feiras",
+        nextOpening: "Amanhã às 12:00",
+        color: "bg-red-500",
+        pulseColor: "bg-red-500"
+      };
+    }
+
+    // Horário normal
+    if (currentHour >= 12 && currentHour < 15) {
+      return {
+        status: "open",
+        message: "Estamos abertos agora",
+        nextOpening: "Fechamos às 15:00",
+        color: "bg-green-500",
+        pulseColor: "bg-green-500"
+      };
+    } else if (currentHour >= 19 && currentHour < 23) {
+      return {
+        status: "open",
+        message: "Estamos abertos agora",
+        nextOpening: "Fechamos às 23:00",
+        color: "bg-green-500",
+        pulseColor: "bg-green-500"
+      };
+    } else if (currentHour >= 15 && currentHour < 19) {
+      return {
+        status: "closed",
+        message: "Fechado para almoço",
+        nextOpening: "Abrimos às 19:00",
+        color: "bg-red-500",
+        pulseColor: "bg-red-500"
+      };
+    } else {
+      return {
+        status: "closed",
+        message: "Fechado",
+        nextOpening: "Abrimos às 12:00",
+        color: "bg-red-500",
+        pulseColor: "bg-red-500"
+      };
+    }
   };
 
   const restaurantStatus = getRestaurantStatus();
