@@ -21,7 +21,7 @@ const DynamicGallery = () => {
     },
     {
       id: 3,
-      name: "A nossa Sala",
+      name: "A nossa sala",
       description: "A sala principal da Taberna Saloia, decorada com elementos tradicionais portugueses e ambiente familiar",
       image: "/14572A16-3B9D-4074-BFEF-F9D28B74FD78.JPG",
       type: "image"
@@ -43,7 +43,7 @@ const DynamicGallery = () => {
     {
       id: 6,
       name: "Pica-Pau",
-      description: "Pica-pau tradicional português, prato de carne picada com batatas fritas e molho caseiro",
+      description: "Pica-pau tradicional português, com batatas frita e molho caseiro",
       image: "/EA096665-7906-4935-8417-15E8E54F134D.JPG",
       type: "image"
     },
@@ -57,7 +57,7 @@ const DynamicGallery = () => {
     {
       id: 8,
       name: "Dia dos Namorados 2023",
-      description: "Celebração especial do Dia dos Namorados na Taberna Saloia, com ambiente romântico e menu especial",
+      description: "Celebração especial do Dia dos Namorados, com ambiente romântico e menu especial",
       image: "/B8E1B1AE-6AFE-4976-9B2B-16506EB813B4.JPG",
       type: "image"
     },
@@ -144,6 +144,13 @@ const DynamicGallery = () => {
       description: "Ensopado de borrego tradicional, carne tenra servido com batatas e pão tostado",
       image: "/64a3fc78-b7ec-42e0-92b0-e7488a177a4b.JPG",
       type: "image"
+    },
+    {
+      id: 21,
+      name: "Chanfana de Cabra",
+      description: "Chanfana de cabra tradicional, cozinhada lentamente em vinho tinto",
+      image: "/IMG_6455.mov",
+      type: "video"
     }
   ];
 
