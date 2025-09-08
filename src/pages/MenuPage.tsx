@@ -100,12 +100,12 @@ const MenuPage = () => {
     {
       title: "Carta de Vinhos",
       description: "Seleção especial de vinhos portugueses",
-      filename: "carta-vinhos.pdf"
+      filename: "_Carta de Vinhos 2024 Final.pdf"
     },
     {
       title: "Carta de Sobremesas",
       description: "Doces tradicionais e sobremesas da casa",
-      filename: "carta-sobremesas.pdf"
+      filename: "Carta de Sobremesas.pdf"
     }
   ];
 
