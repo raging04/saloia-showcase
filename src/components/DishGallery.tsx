@@ -6,6 +6,27 @@ import { FaPlay, FaEye } from "react-icons/fa";
 const DynamicGallery = () => {
   const galleryItems = [
     {
+      id: 24,
+      name: "Naquinhos do Lombo com Molho de Café",
+      description: "Naquinhos de lombo suculentos com molho especial de café, acompanhados de batatas",
+      image: "/naquinhos-lombo-cafe.jpeg",
+      type: "image"
+    },
+    {
+      id: 22,
+      name: "Filetes de Polvo",
+      description: "Filetes de polvo servidos com arroz do mesmo",
+      image: "/filetes-polvo.jpeg",
+      type: "image"
+    },
+    {
+      id: 23,
+      name: "Arroz de Tamboril",
+      description: "Arroz de tamboril tradicional, preparado com arroz carolino e temperos regionais",
+      image: "/arroz-tamboril.jpeg",
+      type: "image"
+    },
+    {
       id: 1,
       name: "Bacalhau em Crosta de Broa",
       description: "Bacalhau fresco coberto com crosta crocante de broa tradicional, acompanhado de batatas e legumes da época",
