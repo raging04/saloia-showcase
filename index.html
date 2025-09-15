@@ -24,8 +24,18 @@
   <link rel="icon" type="image/png" href="/Barris.svg" />
   <link rel="apple-touch-icon" href="/Barris.svg" />
 
-  <!-- Preload hero image for better performance -->
+  <!-- Preload critical resources for better performance -->
   <link rel="preload" as="image" href="/src/assets/IMG_1528_LowQ.png" />
+  <link rel="preload" as="image" href="/hero-restaurant.jpg" />
+  <link rel="preload" as="image" href="/Logo_TabernaSaloia.svg" />
+
+  <!-- DNS prefetch for external resources -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//www.googletagmanager.com">
+
+  <!-- Performance hints -->
+  <meta http-equiv="X-DNS-Prefetch-Control" content="on">
+  <meta name="format-detection" content="telephone=yes">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8B7NXT4T8J"></script>
@@ -109,6 +119,7 @@
     ]
   }
   </script>
+
 </head>
 
 <body>
