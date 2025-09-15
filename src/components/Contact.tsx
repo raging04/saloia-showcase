@@ -8,7 +8,7 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-earth mb-4">
-            Contactos & Localização
+            Contactos & Localização - Taberna Saloia em Loures
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Venha visitar-nos no Infantado e descubra os sabores autênticos da nossa cozinha tradicional

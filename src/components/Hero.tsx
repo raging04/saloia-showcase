@@ -36,7 +36,7 @@ const Hero = () => {
           className="text-5xl md:text-7xl font-serif font-bold mb-6 drop-shadow-lg animate-fade-in-up"
           style={{ textShadow: "0 4px 24px rgba(0,0,0,0.7)" }}
         >
-          Taberna Saloia
+          Taberna Saloia - Restaurante Tradicional Português em Loures
         </h1>
         <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-90 animate-fade-in-up delay-100">
           Uma taberna de amigos no coração do Infantado, em Loures, onde a melhor comida é aquela que nos faz sentir em casa

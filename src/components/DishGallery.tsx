@@ -180,7 +180,7 @@ const DynamicGallery = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-earth mb-4 drop-shadow-sm">
-            Galeria
+            Galeria de Pratos Tradicionais Portugueses - Taberna Saloia
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Explore os nossos pratos, espaços e momentos especiais
@@ -208,7 +208,7 @@ const DynamicGallery = () => {
                     ) : (
                       <img
                         src={item.image}
-                        alt={item.name}
+                        alt={`${item.name} - Prato tradicional português da Taberna Saloia em Loures`}
                         className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     )}
@@ -243,7 +243,7 @@ const DynamicGallery = () => {
                   ) : (
                     <img
                       src={item.image}
-                      alt={item.name}
+                      alt={`${item.name} - Prato tradicional português da Taberna Saloia em Loures`}
                       className="w-full h-96 object-cover rounded-lg"
                     />
                   )}
