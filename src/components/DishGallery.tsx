@@ -180,7 +180,7 @@ const DynamicGallery = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-earth mb-4 drop-shadow-sm">
-            Galeria de Pratos Tradicionais Portugueses - Taberna Saloia
+            Galeria
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Explore os nossos pratos, espaços e momentos especiais

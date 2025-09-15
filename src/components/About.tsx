@@ -10,7 +10,7 @@ const About = () => {
             {/* Texto */}
             <div className="animate-fade-in-up">
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-earth mb-8 drop-shadow-sm">
-                Sobre a Taberna Saloia - História e Tradição em Loures
+                Sobre nós -História e Tradição em Loures
               </h2>
               <div>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
