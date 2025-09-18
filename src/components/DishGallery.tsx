@@ -6,6 +6,20 @@ import { FaPlay, FaEye } from "react-icons/fa";
 const DynamicGallery = () => {
   const galleryItems = [
     {
+      id: 26,
+      name: "Lasanha de Atum com Espinafres",
+      description: "Lasanha cremosa de atum com espinafres frescos, gratinada com queijo e molho bechamel",
+      image: "/lasanha-atum-espinafres.jpeg",
+      type: "image"
+    },
+    {
+      id: 25,
+      name: "Arroz de Cabidela",
+      description: "Arroz de cabidela tradicional português, uma das nossas especialidades! Disponível às quintas-feiras, ao almoço. ",
+      image: "/arroz-cabidela.jpeg",
+      type: "image"
+    },
+    {
       id: 24,
       name: "Naquinhos do Lombo com Molho de Café",
       description: "Naquinhos de lombo suculentos com molho especial de café, acompanhados de batatas",
