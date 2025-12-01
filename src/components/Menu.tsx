@@ -11,7 +11,7 @@ const Menu = () => {
         { name: "Queijo de Ovelha Amanteigado", price: "6,00€" },
         { name: "Queijo de Ovelha", price: "5,00€" },
         { name: "Presunto", price: "6,00€" },
-        { name: "Paté Caseiro", price: "3,50€" },
+        { name: "Paté Caseiro", price: "3,90€" },
         { name: "Queijo Seco", price: "3,50€" },
         { name: "Requeijão c/ Doce de Abóbora", price: "6,50€" },
         { name: "Queijo Fresco", price: "1,50€" },
@@ -23,8 +23,8 @@ const Menu = () => {
     {
       title: "Petiscos",
       items: [
-        { name: "Amêijoa à Bulhão Pato", price: "12,50€" },
-        { name: "Pica-Pau de Novilho", price: "12,00€" },
+        { name: "Amêijoa à Bulhão Pato", price: "13,00€" },
+        { name: "Pica-Pau de Novilho", price: "13,00€" },
         { name: "Gambas à Guilho", price: "11,00€" },
         { name: "Cogumelos Frescos c/ Mel e Vinho do Porto", price: "5,50€" },
         { name: "Linguiça c/ Cogumelos", price: "5,00€" },
@@ -38,22 +38,22 @@ const Menu = () => {
         { 
           name: "Cataplana de Peixe e Marisco (2px)", 
           description: "A nossa seleção de peixes e marisco cozinhados lentamente na tradicional Cataplana",
-          price: "36,00€" 
+          price: "38,00€" 
         },
         { 
           name: "Broa de Bacalhau (2px)", 
           description: "Broa de Milho recheada com Bacalhau confitado em azeite e alho com Grelos e o miolo da Broa",
-          price: "28,00€" 
+          price: "32,00€" 
         },
         { 
           name: "Bacalhau à Lagareiro", 
           description: "Posta de Bacalhau Assada regada com Azeite quente e Alho acompanha Batata a Murro e Legumes",
-          price: "16,00€" 
+          price: "17,50€" 
         },
         { 
           name: "Arroz de Tamboril c/ Gambas", 
           description: "",
-          price: "14,00€ (1Px) | 26,00€ (2Px)" 
+          price: "15,00€ (1Px) | 30,00€ (2Px)" 
         },
         { 
           name: "Garoupa Cozida ou Grelhada", 
@@ -63,22 +63,22 @@ const Menu = () => {
         { 
           name: "Polvo à Lagareiro", 
           description: "Acompanhado com Batata a Murro e Legumes",
-          price: "16,00€" 
+          price: "17,50€" 
         },
         { 
           name: "Caril de Gambas", 
           description: "",
-          price: "14,00€" 
+          price: "15,00€" 
         },
         { 
           name: "Risotto de Gambas e Cogumelos Selvagens", 
           description: "",
-          price: "14,00€" 
+          price: "15,00€" 
         },
         { 
           name: "Salmão", 
           description: "",
-          price: "12,00€" 
+          price: "14,00€" 
         }
       ]
     },
@@ -93,12 +93,12 @@ const Menu = () => {
         { 
           name: "Costeleta de Novilho", 
           description: "",
-          price: "17,00€" 
+          price: "18,00€" 
         },
         { 
           name: "Espetada de Vitela", 
           description: "Com nacos de Vitela e Ananás, Recomenda-se Médio ou Mal Passada",
-          price: "14,50€" 
+          price: "15,00€" 
         },
         { 
           name: "Bife à Portuguesa", 

@@ -13,7 +13,7 @@ const MenuPage = () => {
         { name: "Queijo de Ovelha Amanteigado", description: "", price: "6,00€" },
         { name: "Queijo de Ovelha", description: "", price: "5,00€" },
         { name: "Presunto", description: "", price: "6,00€" },
-        { name: "Paté Caseiro", description: "", price: "3,50€" },
+        { name: "Paté Caseiro", description: "", price: "3,90€" },
         { name: "Queijo Seco", description: "", price: "3,50€" },
         { name: "Requeijão c/ Doce de Abóbora", description: "", price: "6,50€" },
         { name: "Queijo Fresco", description: "", price: "1,50€" },
@@ -25,8 +25,8 @@ const MenuPage = () => {
     {
       title: "Petiscos",
       items: [
-        { name: "Amêijoa à Bulhão Pato", description: "", price: "12,50€" },
-        { name: "Pica-Pau de Novilho", description: "", price: "12,00€" },
+        { name: "Amêijoa à Bulhão Pato", description: "", price: "13,00€" },
+        { name: "Pica-Pau de Novilho", description: "", price: "13,00€" },
         { name: "Gambas à Guilho", description: "", price: "11,00€" },
         { name: "Cogumelos Frescos c/ Mel e Vinho do Porto", description: "", price: "5,50€" },
         { name: "Linguiça c/ Cogumelos", description: "", price: "5,00€" },
@@ -37,23 +37,23 @@ const MenuPage = () => {
     {
       title: "Peixe",
       items: [
-        { name: "Cataplana de Peixe e Marisco (2px)", description: "A nossa seleção de peixes e marisco cozinhados lentamente na tradicional Cataplana", price: "36,00€" },
-        { name: "Broa de Bacalhau (2px)", description: "Broa de Milho recheada com Bacalhau confitado em azeite e alho com Grelos e o miolo da Broa", price: "28,00€" },
-        { name: "Bacalhau à Lagareiro", description: "Posta de Bacalhau Assada regada com Azeite quente e Alho acompanha Batata a Murro e Legumes", price: "16,00€" },
-        { name: "Arroz de Tamboril c/ Gambas", description: "", price: "14,00€ (1Px) | 26,00€ (2Px)" },
+        { name: "Cataplana de Peixe e Marisco (2px)", description: "A nossa seleção de peixes e marisco cozinhados lentamente na tradicional Cataplana", price: "38,00€" },
+        { name: "Broa de Bacalhau (2px)", description: "Broa de Milho recheada com Bacalhau confitado em azeite e alho com Grelos e o miolo da Broa", price: "32,00€" },
+        { name: "Bacalhau à Lagareiro", description: "Posta de Bacalhau Assada regada com Azeite quente e Alho acompanha Batata a Murro e Legumes", price: "17,50€" },
+        { name: "Arroz de Tamboril c/ Gambas", description: "", price: "15,00€ (1Px) | 30,00€ (2Px)" },
         { name: "Garoupa Cozida ou Grelhada", description: "Posta de Garoupa acompanhada de Batata Cozida e Legumes", price: "16,00€" },
-        { name: "Polvo à Lagareiro", description: "Acompanhado com Batata a Murro e Legumes", price: "16,00€" },
-        { name: "Caril de Gambas", description: "", price: "14,00€" },
-        { name: "Risotto de Gambas e Cogumelos Selvagens", description: "", price: "14,00€" },
-        { name: "Salmão", description: "", price: "12,00€" }
+        { name: "Polvo à Lagareiro", description: "Acompanhado com Batata a Murro e Legumes", price: "17,50€" },
+        { name: "Caril de Gambas", description: "", price: "15,00€" },
+        { name: "Risotto de Gambas e Cogumelos Selvagens", description: "", price: "15,00€" },
+        { name: "Salmão", description: "", price: "14,00€" }
       ]
     },
     {
       title: "Carne",
       items: [
         { name: "Tornedó do Lombo", description: "A carne mais nobre! Bife frito e mal passado. Com Molho de Mostarda", price: "18,00€" },
-        { name: "Costeleta de Novilho", description: "", price: "17,00€" },
-        { name: "Espetada de Vitela", description: "Com nacos de Vitela e Ananás, Recomenda-se Médio ou Mal Passada", price: "14,50€" },
+        { name: "Costeleta de Novilho", description: "", price: "18,00€" },
+        { name: "Espetada de Vitela", description: "Com nacos de Vitela e Ananás, Recomenda-se Médio ou Mal Passada", price: "15,00€" },
         { name: "Bife à Portuguesa", description: "O Clássico! Bife da Vazia com molho tradicional, Presunto e Ovo Estrelado acompanhado de Batata Frita às rodelas", price: "14,50€" },
         { name: "Bife à Taberneiro", description: "Bife da Vazia frito com Molho de Natas e Ketchup e Ovo Estrelado. Acompanhado de Batata Frita", price: "14,50€" },
         { name: "Bife Grelhado", description: "Bife da Vazia Grelhado acompanhado de Batata Frita e Arroz", price: "14,00€" },
