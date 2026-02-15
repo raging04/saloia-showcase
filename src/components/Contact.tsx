@@ -74,10 +74,9 @@ const Contact = () => {
             </Card>
 
             <div className="text-center">
-              <Button 
+              <Button
                 size="lg"
-                className="bg-earth text-earth-foreground hover:bg-earth/90 px-8 py-3"
-                onClick={() => window.open('tel:+351219831176', '_self')}
+                className="umai-reservation-button bg-earth text-earth-foreground hover:bg-earth/90 px-8 py-3"
               >
                 Fazer Reserva
               </Button>

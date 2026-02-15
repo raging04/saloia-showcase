@@ -129,14 +129,14 @@ const MenuPage = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-earth mb-4">
               Ementa
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
               Descubra os sabores autênticos da nossa cozinha tradicional portuguesa
             </p>
           </div>

@@ -11,46 +11,46 @@ const Footer = () => {
           {/* Restaurant Info */}
           <div>
             <div className="mb-6">
-              <img 
-                src="/Logo_TabernaSaloia.svg" 
-                alt="Taberna Saloia" 
+              <img
+                src="/Logo_TabernaSaloia.svg"
+                alt="Taberna Saloia"
                 className="h-16 w-auto filter brightness-0 invert"
               />
             </div>
             <div className="flex space-x-4">
-              <a 
-                href="https://facebook.com/tabernasaloia" 
-                target="_blank" 
+              <a
+                href="https://facebook.com/tabernasaloia"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:opacity-80 transition-opacity"
               >
-                <img 
-                  src={facebookLogo} 
-                  alt="Facebook" 
+                <img
+                  src={facebookLogo}
+                  alt="Facebook"
                   className="w-8 h-8 filter brightness-0 invert"
                 />
               </a>
-              <a 
-                href="https://instagram.com/tabernasaloia" 
-                target="_blank" 
+              <a
+                href="https://instagram.com/tabernasaloia"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:opacity-80 transition-opacity"
               >
-                <img 
-                  src={instagramLogo} 
-                  alt="Instagram" 
+                <img
+                  src={instagramLogo}
+                  alt="Instagram"
                   className="w-8 h-8 filter brightness-0 invert"
                 />
               </a>
-              <a 
-                href="https://linktr.ee/tabernasaloia" 
-                target="_blank" 
+              <a
+                href="https://linktr.ee/tabernasaloia"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:opacity-80 transition-opacity"
               >
-                <img 
-                  src={linktreeLogo} 
-                  alt="Linktree" 
+                <img
+                  src={linktreeLogo}
+                  alt="Linktree"
                   className="w-8 h-8 filter brightness-0 invert"
                 />
               </a>

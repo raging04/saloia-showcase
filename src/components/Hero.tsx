@@ -28,7 +28,7 @@ const Hero = () => {
       {!imageLoaded && (
         <div className="absolute inset-0 bg-gradient-to-br from-cream to-warmth/20 animate-pulse" />
       )}
-      
+
       {/* Overlay com gradiente e blur */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent backdrop-blur-sm z-0" />
       <div className="container mx-auto px-4 text-center text-white relative z-10 flex flex-col items-center justify-center py-24 animate-fade-in-up">
@@ -50,10 +50,9 @@ const Hero = () => {
             <FaUtensils className="inline-block mb-0.5" /> Ver Ementa
           </Button>
           <Button
-            onClick={() => window.location.href = "/contactos"}
             variant="outline"
             size="lg"
-            className="border-warmth text-earth bg-white/90 hover:bg-earth hover:text-white hover:border-earth text-lg px-8 py-3 shadow-lg transition-all duration-300 hover:-translate-y-1 flex items-center gap-2"
+            className="umai-reservation-button border-warmth text-earth bg-white/90 hover:bg-earth hover:text-white hover:border-earth text-lg px-8 py-3 shadow-lg transition-all duration-300 hover:-translate-y-1 flex items-center gap-2"
           >
             <FaRegCalendarAlt className="inline-block mb-0.5" /> Reservar Mesa
           </Button>

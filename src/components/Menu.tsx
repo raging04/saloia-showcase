@@ -35,170 +35,170 @@ const Menu = () => {
     {
       title: "Peixe",
       items: [
-        { 
-          name: "Cataplana de Peixe e Marisco (2px)", 
+        {
+          name: "Cataplana de Peixe e Marisco (2px)",
           description: "A nossa seleção de peixes e marisco cozinhados lentamente na tradicional Cataplana",
-          price: "38,00€" 
+          price: "38,00€"
         },
-        { 
-          name: "Broa de Bacalhau (2px)", 
+        {
+          name: "Broa de Bacalhau (2px)",
           description: "Broa de Milho recheada com Bacalhau confitado em azeite e alho com Grelos e o miolo da Broa",
-          price: "32,00€" 
+          price: "32,00€"
         },
-        { 
-          name: "Bacalhau à Lagareiro", 
+        {
+          name: "Bacalhau à Lagareiro",
           description: "Posta de Bacalhau Assada regada com Azeite quente e Alho acompanha Batata a Murro e Legumes",
-          price: "17,50€" 
+          price: "17,50€"
         },
-        { 
-          name: "Arroz de Tamboril c/ Gambas", 
+        {
+          name: "Arroz de Tamboril c/ Gambas",
           description: "",
-          price: "15,00€ (1Px) | 30,00€ (2Px)" 
+          price: "15,00€ (1Px) | 30,00€ (2Px)"
         },
-        { 
-          name: "Garoupa Cozida ou Grelhada", 
+        {
+          name: "Garoupa Cozida ou Grelhada",
           description: "Posta de Garoupa acompanhada de Batata Cozida e Legumes",
-          price: "16,00€" 
+          price: "16,00€"
         },
-        { 
-          name: "Polvo à Lagareiro", 
+        {
+          name: "Polvo à Lagareiro",
           description: "Acompanhado com Batata a Murro e Legumes",
-          price: "17,50€" 
+          price: "17,50€"
         },
-        { 
-          name: "Caril de Gambas", 
+        {
+          name: "Caril de Gambas",
           description: "",
-          price: "15,00€" 
+          price: "15,00€"
         },
-        { 
-          name: "Risotto de Gambas e Cogumelos Selvagens", 
+        {
+          name: "Risotto de Gambas e Cogumelos Selvagens",
           description: "",
-          price: "15,00€" 
+          price: "15,00€"
         },
-        { 
-          name: "Salmão", 
+        {
+          name: "Salmão",
           description: "",
-          price: "14,00€" 
+          price: "14,00€"
         }
       ]
     },
     {
       title: "Carne",
       items: [
-        { 
-          name: "Tornedó do Lombo", 
+        {
+          name: "Tornedó do Lombo",
           description: "A carne mais nobre! Bife frito e mal passado. Com Molho de Mostarda",
-          price: "18,00€" 
+          price: "18,00€"
         },
-        { 
-          name: "Costeleta de Novilho", 
+        {
+          name: "Costeleta de Novilho",
           description: "",
-          price: "18,00€" 
+          price: "18,00€"
         },
-        { 
-          name: "Espetada de Vitela", 
+        {
+          name: "Espetada de Vitela",
           description: "Com nacos de Vitela e Ananás, Recomenda-se Médio ou Mal Passada",
-          price: "15,00€" 
+          price: "15,00€"
         },
-        { 
-          name: "Bife à Portuguesa", 
+        {
+          name: "Bife à Portuguesa",
           description: "O Clássico! Bife da Vazia com molho tradicional, Presunto e Ovo Estrelado acompanhado de Batata Frita às rodelas",
-          price: "14,50€" 
+          price: "14,50€"
         },
-        { 
-          name: "Bife à Taberneiro", 
+        {
+          name: "Bife à Taberneiro",
           description: "Bife da Vazia frito com Molho de Natas e Ketchup e Ovo Estrelado. Acompanhado de Batata Frita",
-          price: "14,50€" 
+          price: "14,50€"
         },
-        { 
-          name: "Bife Grelhado", 
+        {
+          name: "Bife Grelhado",
           description: "Bife da Vazia Grelhado acompanhado de Batata Frita e Arroz",
-          price: "14,00€" 
+          price: "14,00€"
         },
-        { 
-          name: "Bife 3 Pimentas", 
+        {
+          name: "Bife 3 Pimentas",
           description: "Bife da Vazia Frito com Molho de 3 Pimentas acompanhado de Batata Frita",
-          price: "14,00€" 
+          price: "14,00€"
         },
-        { 
-          name: "Bife Mostarda", 
+        {
+          name: "Bife Mostarda",
           description: "Bife da Vazia Frito com Molho de Mostarda acompanhado de Batata Frita",
-          price: "14,00€" 
+          price: "14,00€"
         },
-        { 
-          name: "Lombinhos Mel e Alecrim", 
+        {
+          name: "Lombinhos Mel e Alecrim",
           description: "Lombinhos de Porco c/ Molho de Mel e Alecrim acompanhado de Batata Frita",
-          price: "13,50€" 
+          price: "13,50€"
         },
-        { 
-          name: "Lagartos de Porco Ibérico", 
+        {
+          name: "Lagartos de Porco Ibérico",
           description: "Tirinhas de Porco Ibérico Grelhadas c/ Batata Frita",
-          price: "13,50€" 
+          price: "13,50€"
         },
-        { 
-          name: "Francesinha", 
+        {
+          name: "Francesinha",
           description: "",
-          price: "13,50€" 
+          price: "13,50€"
         },
-        { 
-          name: "Bitoque de Vitela", 
+        {
+          name: "Bitoque de Vitela",
           description: "Bife Frito, Ovo a Cavalo, Arroz e Batata Frita",
-          price: "10,00€" 
+          price: "10,00€"
         },
-        { 
-          name: "Bifinhos de Frango", 
+        {
+          name: "Bifinhos de Frango",
           description: "Grelhados ou Com Natas e Cogumelos",
-          price: "9,50€/10,50€" 
+          price: "9,50€/10,50€"
         }
       ]
     },
     {
       title: "Sugestões Vegetarianas",
       items: [
-        { 
-          name: "Risotto", 
+        {
+          name: "Risotto",
           description: "",
-          price: "12,50€" 
+          price: "12,50€"
         },
-        { 
-          name: "Omelete de Legumes", 
+        {
+          name: "Omelete de Legumes",
           description: "",
-          price: "9,00€" 
+          price: "9,00€"
         }
       ]
     },
     {
       title: "Guarnições",
       items: [
-        { 
-          name: "Dose de Legumes", 
+        {
+          name: "Dose de Legumes",
           description: "",
-          price: "2,50€" 
+          price: "2,50€"
         },
-        { 
-          name: "Salada Mista", 
+        {
+          name: "Salada Mista",
           description: "",
-          price: "2,50€" 
+          price: "2,50€"
         },
-        { 
-          name: "Dose de Arroz", 
+        {
+          name: "Dose de Arroz",
           description: "",
-          price: "2,50€" 
+          price: "2,50€"
         },
-        { 
-          name: "Dose de Batata Frita", 
+        {
+          name: "Dose de Batata Frita",
           description: "",
-          price: "2,50€" 
+          price: "2,50€"
         },
-        { 
-          name: "Sopa do Dia", 
+        {
+          name: "Sopa do Dia",
           description: "",
-          price: "1,50€" 
+          price: "1,50€"
         },
-        { 
-          name: "Ovo Estrelado", 
+        {
+          name: "Ovo Estrelado",
           description: "",
-          price: "1,00€" 
+          price: "1,00€"
         }
       ]
     }
@@ -251,9 +251,15 @@ const Menu = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-earth mb-4">
             Ementa
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
             Descubra os sabores autênticos da nossa cozinha tradicional portuguesa
           </p>
+          <Button
+            size="lg"
+            className="umai-takeaway-button bg-warmth text-earth hover:bg-warmth/90 px-8 py-6 text-lg"
+          >
+            Encomendar Takeaway
+          </Button>
         </div>
 
         {/* Menu Categories */}

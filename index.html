@@ -125,6 +125,47 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
+  <script src="https://widget.letsumai.com/dist/embed.min.js" data-api-key="293a92e2-2890-4c66-93ac-8a73704d8478"
+    data-widget-type="reservation"></script>
+  <script type="text/javascript">
+    function init() {
+      document.body.addEventListener('click', function (e) {
+        // Reservation buttons
+        const reservationBtn = e.target.closest(".umai-reservation-button");
+        if (reservationBtn) {
+          e.preventDefault();
+          umaiWidget.config({ apiKey: "293a92e2-2890-4c66-93ac-8a73704d8478", widgetType: "reservation" });
+          umaiWidget.openWidget();
+          return;
+        }
+
+        // Gift card buttons (Disabled)
+        /*
+        const giftcardBtn = e.target.closest(".umai-giftcard-button");
+        if (giftcardBtn) {
+          e.preventDefault();
+          umaiWidget.config({ apiKey: "293a92e2-2890-4c66-93ac-8a73704d8478", widgetType: "giftcard" });
+          umaiWidget.openWidget();
+          return;
+        }
+        */
+
+        // Takeaway buttons (Disabled)
+        /*
+        const takeawayBtn = e.target.closest(".umai-takeaway-button");
+        if (takeawayBtn) {
+          e.preventDefault();
+          umaiWidget.config({ apiKey: "293a92e2-2890-4c66-93ac-8a73704d8478", widgetType: "takeaway" });
+          umaiWidget.openWidget();
+          return;
+        }
+        */
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", init);
+    window.addEventListener("mercury:load", init);
+  </script>
 </body>
 
 </html>
