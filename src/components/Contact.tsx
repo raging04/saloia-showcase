@@ -107,7 +107,7 @@ const Contact = () => {
             {/* Map */}
             <div className="bg-card rounded-lg overflow-hidden shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC6ow3CU3JLF93thhXYyXQ0KzvMWTGFp_0&q=Taberna Saloia,Av. Descobertas n° 41 Loja esquerda, 2670-384 Loures"
+                src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}&q=Taberna Saloia,Av. Descobertas n° 41 Loja esquerda, 2670-384 Loures`}
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
