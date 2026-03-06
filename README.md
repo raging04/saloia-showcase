@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Taberna Saloia Logo" src="public/Logo_TabernaSaloia.svg" width="80" />
+  <img alt="Taberna Saloia Logo" src="public/Logo_TabernaSaloia.svg" width="200" />
   <h1>Taberna Saloia Website</h1>
   <p>Official website for <strong>Taberna Saloia</strong></p>
 
