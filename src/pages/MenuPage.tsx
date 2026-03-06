@@ -15,7 +15,7 @@ const MenuPage = () => {
         { name: "Presunto", description: "", price: "6,00€" },
         { name: "Paté Caseiro", description: "", price: "3,90€" },
         { name: "Queijo Seco", description: "", price: "3,50€" },
-        { name: "Requeijão c/ Doce de Abóbora", description: "", price: "6,50€" },
+        { name: "Requeijão com Doce de Abóbora", description: "", price: "6,50€" },
         { name: "Queijo Fresco", description: "", price: "1,50€" },
         { name: "Cesto de Pão", description: "", price: "1,20€" },
         { name: "Azeitonas", description: "", price: "1,00€" },
