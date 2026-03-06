@@ -5,7 +5,7 @@
 
   <p>
     <a href="https://tabernasaloia.pt" target="_blank">
-      <img src="https://img.shields.io/badge/Website-tabernasaloia.pt-blue?style=for-the-badge&logo=googlechrome" alt="Website Link" />
+      <img src="/Logo_TabernaSaloia.svg" alt="Website Link" />
     </a>
   </p>
 </div>
