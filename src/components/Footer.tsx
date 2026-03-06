@@ -90,7 +90,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-earth-foreground/20 mt-8 pt-8 text-center text-earth-foreground/60">
-          <p>&copy; 2025 A Taberna Saloia da Avenida. Todos os direitos reservados.</p>
+          <p>&copy; 2026 A Taberna Saloia da Avenida. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
