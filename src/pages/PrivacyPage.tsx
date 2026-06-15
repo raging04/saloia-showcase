@@ -54,6 +54,7 @@ const PrivacyPage = () => {
                   <li>
                     <span className="text-earth font-medium">A Taberna Saloia da Avenida</span>
                   </li>
+                  <li>NIF: 514046406</li>
                   <li>Av. das Descobertas n.º 41, Loja Esquerda, 2670-384 Loures, Portugal</li>
                   <li>
                     Telefone:{" "}
