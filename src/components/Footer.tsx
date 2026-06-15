@@ -1,4 +1,5 @@
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 import facebookLogo from "@/assets/facebook-svgrepo-com.svg";
 import instagramLogo from "@/assets/instagram-svgrepo-com.svg";
 import linktreeLogo from "@/assets/Linktree Logo.svg";
@@ -22,37 +23,28 @@ const Footer = () => {
                 href="https://facebook.com/tabernasaloia"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook (abre em nova janela)"
                 className="text-white hover:opacity-80 transition-opacity"
               >
-                <img
-                  src={facebookLogo}
-                  alt="Facebook"
-                  className="w-8 h-8 filter brightness-0 invert"
-                />
+                <img src={facebookLogo} alt="" aria-hidden="true" className="w-8 h-8 filter brightness-0 invert" />
               </a>
               <a
                 href="https://instagram.com/tabernasaloia"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram (abre em nova janela)"
                 className="text-white hover:opacity-80 transition-opacity"
               >
-                <img
-                  src={instagramLogo}
-                  alt="Instagram"
-                  className="w-8 h-8 filter brightness-0 invert"
-                />
+                <img src={instagramLogo} alt="" aria-hidden="true" className="w-8 h-8 filter brightness-0 invert" />
               </a>
               <a
                 href="https://linktr.ee/tabernasaloia"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Linktree (abre em nova janela)"
                 className="text-white hover:opacity-80 transition-opacity"
               >
-                <img
-                  src={linktreeLogo}
-                  alt="Linktree"
-                  className="w-8 h-8 filter brightness-0 invert"
-                />
+                <img src={linktreeLogo} alt="" aria-hidden="true" className="w-8 h-8 filter brightness-0 invert" />
               </a>
             </div>
           </div>
@@ -61,16 +53,16 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contactos</h4>
             <div className="space-y-2 text-earth-foreground/80">
-              <div className="flex items-center">
-                <Phone className="w-4 h-4 mr-2" />
+              <a href="tel:+351219831176" className="flex items-center hover:text-white transition-colors">
+                <Phone className="w-4 h-4 mr-2" aria-hidden="true" />
                 <span>+351 21 983 11 76</span>
-              </div>
-              <div className="flex items-center">
-                <Mail className="w-4 h-4 mr-2" />
+              </a>
+              <a href="mailto:info@tabernasaloia.pt" className="flex items-center hover:text-white transition-colors">
+                <Mail className="w-4 h-4 mr-2" aria-hidden="true" />
                 <span>info@tabernasaloia.pt</span>
-              </div>
+              </a>
               <div className="flex items-start">
-                <MapPin className="w-4 h-4 mr-2 mt-1" />
+                <MapPin className="w-4 h-4 mr-2 mt-1" aria-hidden="true" />
                 <div className="flex flex-col">
                   <span>Avenida das Descobertas 41 - Loja Esquerda</span>
                   <span>Infantado - Loures</span>
@@ -90,7 +82,12 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-earth-foreground/20 mt-8 pt-8 text-center text-earth-foreground/60">
-          <p>&copy; 2026 A Taberna Saloia da Avenida. Todos os direitos reservados.</p>
+          <p>
+            &copy; 2026 A Taberna Saloia da Avenida. Todos os direitos reservados.{" "}
+            <Link to="/privacidade" className="underline underline-offset-2 hover:text-white">
+              Política de Privacidade
+            </Link>
+          </p>
         </div>
       </div>
     </footer>

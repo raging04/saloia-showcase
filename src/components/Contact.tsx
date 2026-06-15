@@ -2,14 +2,23 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
 
+const MAPS_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY as string | undefined;
+const MAPS_QUERY = "Taberna Saloia,Av. Descobertas n° 41 Loja esquerda, 2670-384 Loures";
+const LAT = 38.8385829;
+const LON = -9.1612347;
+// OpenStreetMap embed needs no API key and is always frameable.
+const OSM_BBOX = `${LON - 0.004},${LAT - 0.003},${LON + 0.004},${LAT + 0.003}`;
+const OSM_SRC = `https://www.openstreetmap.org/export/embed.html?bbox=${encodeURIComponent(OSM_BBOX)}&layer=mapnik&marker=${LAT},${LON}`;
+const DIRECTIONS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAPS_QUERY)}`;
+
 const Contact = () => {
   return (
     <section id="contactos" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-earth mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-earth mb-4">
             Contactos & Localização
-          </h2>
+          </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Venha visitar-nos no Infantado e descubra os sabores autênticos da nossa cozinha tradicional
           </p>
@@ -21,12 +30,14 @@ const Contact = () => {
             <Card className="bg-card shadow-lg">
               <CardHeader>
                 <CardTitle className="text-2xl text-earth flex items-center">
-                  <Phone className="w-6 h-6 mr-2" />
+                  <Phone className="w-6 h-6 mr-2" aria-hidden="true" />
                   Telefone
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-foreground">+351 21 983 11 76</p>
+                <a href="tel:+351219831176" className="text-foreground hover:text-earth transition-colors text-lg font-medium">
+                  +351 21 983 11 76
+                </a>
                 <p className="text-muted-foreground text-sm mt-1">
                   Para reservas e informações
                 </p>
@@ -36,12 +47,14 @@ const Contact = () => {
             <Card className="bg-card shadow-lg">
               <CardHeader>
                 <CardTitle className="text-2xl text-earth flex items-center">
-                  <Mail className="w-6 h-6 mr-2" />
+                  <Mail className="w-6 h-6 mr-2" aria-hidden="true" />
                   Email
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-foreground">info@tabernasaloia.pt</p>
+                <a href="mailto:info@tabernasaloia.pt" className="text-foreground hover:text-earth transition-colors">
+                  info@tabernasaloia.pt
+                </a>
                 <p className="text-muted-foreground text-sm mt-1">
                   Para reservas e eventos
                 </p>
@@ -51,7 +64,7 @@ const Contact = () => {
             <Card className="bg-card shadow-lg">
               <CardHeader>
                 <CardTitle className="text-2xl text-earth flex items-center">
-                  <Clock className="w-6 h-6 mr-2" />
+                  <Clock className="w-6 h-6 mr-2" aria-hidden="true" />
                   Horário de Funcionamento
                 </CardTitle>
               </CardHeader>
@@ -88,7 +101,7 @@ const Contact = () => {
             <Card className="bg-card shadow-lg">
               <CardHeader>
                 <CardTitle className="text-2xl text-earth flex items-center">
-                  <MapPin className="w-6 h-6 mr-2" />
+                  <MapPin className="w-6 h-6 mr-2" aria-hidden="true" />
                   Localização
                 </CardTitle>
               </CardHeader>
@@ -104,10 +117,16 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            {/* Map */}
+            {/* Map: OpenStreetMap embed (no API key, always renders). If a
+                referrer-restricted Google Maps key is provided, the official
+                Embed API is used instead. A directions link is shown either way. */}
             <div className="bg-card rounded-lg overflow-hidden shadow-lg">
               <iframe
-                src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}&q=Taberna Saloia,Av. Descobertas n° 41 Loja esquerda, 2670-384 Loures`}
+                src={
+                  MAPS_KEY
+                    ? `https://www.google.com/maps/embed/v1/place?key=${MAPS_KEY}&q=${encodeURIComponent(MAPS_QUERY)}`
+                    : OSM_SRC
+                }
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
@@ -118,6 +137,15 @@ const Contact = () => {
                 className="w-full h-96"
               />
             </div>
+            <a
+              href={DIRECTIONS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-earth font-medium hover:underline"
+            >
+              <MapPin className="w-4 h-4" aria-hidden="true" />
+              Como chegar (Google Maps)
+            </a>
           </div>
         </div>
       </div>
