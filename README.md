@@ -23,7 +23,6 @@ A pet project for the Taberna Saloia restaurant, based in Loures, Portugal. Buil
 - **[Tailwind CSS](https://tailwindcss.com/)** - Styling
 - **[Shadcn UI](https://ui.shadcn.com/)** & **[Radix UI](https://www.radix-ui.com/)** - UI Components
 - **[React Router](https://reactrouter.com/)** - Routing
-- **[React Query](https://tanstack.com/query/latest)** - State management
 
 ## How to Run Locally
 
@@ -45,6 +44,37 @@ A pet project for the Taberna Saloia restaurant, based in Loures, Portugal. Buil
    ```bash
    npm run dev
    ```
+
+## Image optimization
+
+Photos in `public/` can be downscaled/re-encoded with a dependency-free script
+(macOS `sips`):
+
+```bash
+npm run optimize:images
+```
+
+Videos are already re-encoded to web-optimized H.264. To redo them you need
+`ffmpeg`, e.g.:
+
+```bash
+ffmpeg -i input.mov -an -vf "scale='min(1280,iw)':-2" -c:v libx264 -crf 28 -movflags +faststart output.mov
+```
+
+## Deployment (AWS Amplify)
+
+The site is hosted on **AWS Amplify**, which builds automatically on push using
+[`amplify.yml`](./amplify.yml). Two things are configured outside the build:
+
+- **Custom HTTP headers** (cache + security headers + CSP) live in
+  [`customHttp.yml`](./customHttp.yml) and are applied by Amplify automatically.
+- **SPA rewrite** — Amplify rewrites are set in the **console** (App settings →
+  Rewrites and redirects), not in a repo file. Add a single rule so deep links
+  like `/ementa` survive a hard refresh:
+
+  | Source address | Target address | Type |
+  | --- | --- | --- |
+  | `</^[^.]+$\|\.(?!(css\|gif\|ico\|jpg\|jpeg\|js\|png\|txt\|svg\|woff\|woff2\|ttf\|map\|json\|webp\|mp4\|mov\|pdf)$)([^.]+$)/>` | `/index.html` | `200 (Rewrite)` |
 
 ## License
 

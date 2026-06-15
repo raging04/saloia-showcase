@@ -1,5 +1,5 @@
-import heroImage from "@/assets/IMG_1528.png";
 import { FaBookOpen, FaLeaf, FaHeart } from "react-icons/fa";
+import LazyVideo from "@/components/LazyVideo";
 
 const About = () => {
   return (
@@ -28,47 +28,34 @@ const About = () => {
                 </p>
               </div>
             </div>
-            {/* Vídeo ilustrativo */}
-            <div className="hidden md:block animate-fade-in-left">
-              <video
+            {/* Vídeo ilustrativo (carregado apenas quando visível) */}
+            <div className="animate-fade-in-left mb-8 md:mb-0">
+              <LazyVideo
                 src="/Teaser_sSom.mov"
-                className="rounded-2xl shadow-2xl object-cover w-full h-96 border-4 border-earth/10"
+                poster="/Teaser_sSom-poster.jpg"
                 autoPlay
-                loop
-                muted
-                playsInline
-              />
-            </div>
-            {/* Vídeo mobile */}
-            <div className="md:hidden mb-8 animate-fade-in-up">
-              <video
-                src="/Teaser_sSom.mov"
-                className="rounded-2xl shadow-2xl object-cover w-full h-64 border-4 border-earth/10"
-                autoPlay
-                loop
-                muted
-                playsInline
+                className="rounded-2xl shadow-2xl object-cover w-full h-64 md:h-96 border-4 border-earth/10"
               />
             </div>
           </div>
-          
+
           {/* Card de valores atravessando as duas colunas */}
           <div className="animate-fade-in-up">
             <div className="bg-background/80 p-4 md:p-8 rounded-xl shadow-lg w-full">
               <h3 className="text-xl md:text-2xl font-bold text-earth mb-4 md:mb-6 font-serif text-center">Os Nossos Valores</h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 w-full">
                 <div className="text-center group hover:bg-cream/60 rounded-lg p-3 md:p-4 transition">
-                  <FaBookOpen className="w-6 h-6 md:w-8 md:h-8 text-earth mx-auto mb-2 md:mb-3 group-hover:scale-110 transition-transform" />
+                  <FaBookOpen aria-hidden="true" className="w-6 h-6 md:w-8 md:h-8 text-earth mx-auto mb-2 md:mb-3 group-hover:scale-110 transition-transform" />
                   <h4 className="font-semibold text-earth text-sm md:text-base mb-1 md:mb-2">Tradição Saloia</h4>
                   <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">Inspirados nas raízes da região, preservamos os sabores autênticos</p>
                 </div>
                 <div className="text-center group hover:bg-cream/60 rounded-lg p-3 md:p-4 transition">
-                  <FaLeaf className="w-6 h-6 md:w-8 md:h-8 text-earth mx-auto mb-2 md:mb-3 group-hover:scale-110 transition-transform" />
+                  <FaLeaf aria-hidden="true" className="w-6 h-6 md:w-8 md:h-8 text-earth mx-auto mb-2 md:mb-3 group-hover:scale-110 transition-transform" />
                   <h4 className="font-semibold text-earth text-sm md:text-base mb-1 md:mb-2">Casa & Família</h4>
                   <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">Um espaço acolhedor onde cada refeição é um momento de partilha</p>
                 </div>
                 <div className="text-center group hover:bg-cream/60 rounded-lg p-3 md:p-4 transition">
-                  <FaHeart className="w-6 h-6 md:w-8 md:h-8 text-earth mx-auto mb-2 md:mb-3 group-hover:scale-110 transition-transform" />
+                  <FaHeart aria-hidden="true" className="w-6 h-6 md:w-8 md:h-8 text-earth mx-auto mb-2 md:mb-3 group-hover:scale-110 transition-transform" />
                   <h4 className="font-semibold text-earth text-sm md:text-base mb-1 md:mb-2">Amizade</h4>
                   <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">Mais do que um restaurante, somos uma taberna de amigos</p>
                 </div>

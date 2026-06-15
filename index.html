@@ -2,6 +2,55 @@
 <html lang="pt-PT">
 
 <head>
+  <!-- Consent Mode v2 defaults — MUST run before GTM/gtag/Pixel (RGPD/ePrivacy) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    // Default all non-essential storage to denied until the visitor opts in.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+
+    // Meta Pixel — only loaded after consent is granted.
+    function loadMetaPixel() {
+      if (window.fbq) return;
+      !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+        n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+      }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '2076088809803976');
+      fbq('track', 'PageView');
+    }
+
+    // Called by the React cookie banner (src/components/CookieConsent.tsx).
+    window.updateConsent = function (granted) {
+      gtag('consent', 'update', {
+        ad_storage: granted ? 'granted' : 'denied',
+        ad_user_data: granted ? 'granted' : 'denied',
+        ad_personalization: granted ? 'granted' : 'denied',
+        analytics_storage: granted ? 'granted' : 'denied'
+      });
+      if (granted) loadMetaPixel();
+    };
+
+    // Re-apply a previously stored choice on subsequent visits.
+    try {
+      if (localStorage.getItem('ts-cookie-consent') === 'granted') {
+        window.updateConsent(true);
+      }
+    } catch (e) { }
+  </script>
+
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -27,6 +76,13 @@
   <meta name="geo.placename" content="Loures" />
   <meta name="geo.position" content="38.8385829;-9.1612347" />
   <meta name="ICBM" content="38.8385829, -9.1612347" />
+
+  <!-- Canonical (per-route value is updated client-side by useSeo) -->
+  <link rel="canonical" href="https://tabernasaloia.pt/" />
+
+  <!-- Fonts: preconnect to both the CSS host and the font-binary host -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap">
 
@@ -36,53 +92,30 @@
   <link rel="apple-touch-icon" href="/Barris.svg" />
 
   <!-- Preload critical resources for better performance -->
-  <link rel="preload" as="image" href="/src/assets/IMG_1528_LowQ.png" />
+  <link rel="preload" as="image" href="/src/assets/IMG_1528_LowQ.jpg" />
   <link rel="preload" as="image" href="/hero-restaurant.jpg" />
   <link rel="preload" as="image" href="/Logo_TabernaSaloia.svg" />
 
   <!-- DNS prefetch for external resources -->
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="dns-prefetch" href="//www.googletagmanager.com">
 
   <!-- Performance hints -->
   <meta http-equiv="X-DNS-Prefetch-Control" content="on">
   <meta name="format-detection" content="telephone=yes">
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) — respects the Consent Mode defaults set above -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8B7NXT4T8J"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-8B7NXT4T8J');
   </script>
-
-  <!-- Meta Pixel Code -->
-  <script>
-    !function (f, b, e, v, n, t, s) {
-      if (f.fbq) return; n = f.fbq = function () {
-        n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      };
-      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-      n.queue = []; t = b.createElement(e); t.async = !0;
-      t.src = v; s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2076088809803976');
-    fbq('track', 'PageView');
-  </script>
-  <!-- End Meta Pixel Code -->
-
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="restaurant" />
   <meta property="og:title" content="Taberna Saloia - Restaurante Tradicional Português em Loures" />
   <meta property="og:description"
     content="Restaurante tradicional português no Infantado, Loures. Especialidades: Bacalhau, Cozido, Feijoada, Caracoletas. Reservas: +351 21 983 11 76" />
-  <meta property="og:image" content="/hero-restaurant.jpg" />
+  <meta property="og:image" content="https://tabernasaloia.pt/hero-restaurant.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:url" content="https://tabernasaloia.pt" />
@@ -101,7 +134,7 @@
   <meta name="twitter:title" content="Taberna Saloia - Restaurante Tradicional Português em Loures" />
   <meta name="twitter:description"
     content="Restaurante tradicional português no Infantado, Loures. Especialidades: Bacalhau, Cozido, Feijoada, Caracoletas." />
-  <meta name="twitter:image" content="/hero-restaurant.jpg" />
+  <meta name="twitter:image" content="https://tabernasaloia.pt/hero-restaurant.jpg" />
 
   <!-- Schema.org markup for Restaurant -->
   <script type="application/ld+json">
@@ -142,7 +175,7 @@
     "servesCuisine": "Portuguese",
     "priceRange": "€€",
     "acceptsReservations": true,
-    "image": ["/hero-restaurant.jpg", "/Logo_TabernaSaloia.svg"],
+    "image": ["https://tabernasaloia.pt/hero-restaurant.jpg", "https://tabernasaloia.pt/Logo_TabernaSaloia.svg"],
     "sameAs": [
       "https://www.facebook.com/tabernasaloia",
       "https://www.instagram.com/tabernasaloia"
@@ -153,20 +186,9 @@
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5353LGBM" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <!-- Meta Pixel Code (noscript) -->
-  <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=2076088809803976&ev=PageView&noscript=1" /></noscript>
-  <!-- End Meta Pixel Code (noscript) -->
-
-
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
-  <script src="https://widget.letsumai.com/dist/embed.min.js" data-api-key="293a92e2-2890-4c66-93ac-8a73704d8478"
+  <script defer src="https://widget.letsumai.com/dist/embed.min.js" data-api-key="293a92e2-2890-4c66-93ac-8a73704d8478"
     data-widget-type="reservation"></script>
   <script type="text/javascript">
     function init() {
@@ -175,32 +197,15 @@
         const reservationBtn = e.target.closest(".umai-reservation-button");
         if (reservationBtn) {
           e.preventDefault();
+          if (typeof umaiWidget === 'undefined') {
+            // Widget script blocked or not yet loaded — fall back to calling.
+            window.location.href = "tel:+351219831176";
+            return;
+          }
           umaiWidget.config({ apiKey: "293a92e2-2890-4c66-93ac-8a73704d8478", widgetType: "reservation" });
           umaiWidget.openWidget();
           return;
         }
-
-        // Gift card buttons (Disabled)
-        /*
-        const giftcardBtn = e.target.closest(".umai-giftcard-button");
-        if (giftcardBtn) {
-          e.preventDefault();
-          umaiWidget.config({ apiKey: "293a92e2-2890-4c66-93ac-8a73704d8478", widgetType: "giftcard" });
-          umaiWidget.openWidget();
-          return;
-        }
-        */
-
-        // Takeaway buttons (Disabled)
-        /*
-        const takeawayBtn = e.target.closest(".umai-takeaway-button");
-        if (takeawayBtn) {
-          e.preventDefault();
-          umaiWidget.config({ apiKey: "293a92e2-2890-4c66-93ac-8a73704d8478", widgetType: "takeaway" });
-          umaiWidget.openWidget();
-          return;
-        }
-        */
       });
     }
 

@@ -1,10 +1,18 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { FaPlay, FaEye } from "react-icons/fa";
+import { Card } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import LazyVideo from "@/components/LazyVideo";
+
+interface GalleryItem {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+  type: "image" | "video";
+  poster?: string;
+}
 
 const DynamicGallery = () => {
-  const galleryItems = [
+  const galleryItems: GalleryItem[] = [
     {
       id: 26,
       name: "Lasanha de Atum com Espinafres",
@@ -51,7 +59,7 @@ const DynamicGallery = () => {
       id: 2,
       name: "A nossa casa",
       description: "O ambiente acolhedor da Taberna Saloia, onde cada refeição é um momento de partilha e tradição",
-      image: "/IMG_1528.png",
+      image: "/IMG_1528.jpg",
       type: "image"
     },
     {
@@ -129,6 +137,7 @@ const DynamicGallery = () => {
       name: "Pernil Assado no Forno",
       description: "Pernil assado no forno, especialidade da casa, cozinhado lentamente com temperos caseiros até ficar tenro e suculento, servido com batatas assadas e legumes",
       image: "/448fb5f8-1c51-40d9-9327-0f43c46aa094.MP4",
+      poster: "/pernil-poster.jpg",
       type: "video"
     },
     {
@@ -185,6 +194,7 @@ const DynamicGallery = () => {
       name: "Chanfana de Cabra",
       description: "Chanfana de cabra tradicional, cozinhada lentamente em vinho tinto",
       image: "/IMG_6455.mov",
+      poster: "/chanfana-poster.jpg",
       type: "video"
     }
   ];
@@ -211,18 +221,18 @@ const DynamicGallery = () => {
                 >
                   <div className="relative overflow-hidden">
                     {item.type === "video" ? (
-                      <video
+                      <LazyVideo
                         src={item.image}
-                        className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                        poster={item.poster}
                         autoPlay
-                        loop
-                        muted
-                        playsInline
+                        className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     ) : (
                       <img
                         src={item.image}
-                        alt={`${item.name} - Prato tradicional português da Taberna Saloia em Loures`}
+                        alt={`${item.name} — Taberna Saloia, Loures`}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     )}
@@ -245,31 +255,31 @@ const DynamicGallery = () => {
               <DialogContent className="max-w-4xl">
                 <div className="relative">
                   {item.type === "video" ? (
-                    <video
+                    <LazyVideo
                       src={item.image}
-                      className="w-full h-96 object-cover rounded-lg"
+                      poster={item.poster}
                       autoPlay
-                      loop
-                      muted
                       controls
-                      playsInline
+                      className="w-full h-96 object-cover rounded-lg"
                     />
                   ) : (
                     <img
                       src={item.image}
-                      alt={`${item.name} - Prato tradicional português da Taberna Saloia em Loures`}
+                      alt={`${item.name} — Taberna Saloia, Loures`}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-96 object-cover rounded-lg"
                     />
                   )}
 
                 </div>
                 <div className="mt-6">
-                  <h3 className="text-2xl font-semibold text-earth mb-2">
+                  <DialogTitle className="text-2xl font-semibold text-earth mb-2">
                     {item.name}
-                  </h3>
-                  <p className="text-muted-foreground text-lg">
+                  </DialogTitle>
+                  <DialogDescription className="text-muted-foreground text-lg">
                     {item.description}
-                  </p>
+                  </DialogDescription>
                 </div>
               </DialogContent>
             </Dialog>
