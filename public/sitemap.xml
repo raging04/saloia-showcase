@@ -7,7 +7,7 @@
   <!-- Página Principal -->
   <url>
     <loc>https://tabernasaloia.com/</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,7 +15,7 @@
   <!-- Ementa -->
   <url>
     <loc>https://tabernasaloia.com/ementa</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23,7 +23,7 @@
   <!-- Contactos -->
   <url>
     <loc>https://tabernasaloia.com/contactos</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -31,7 +31,7 @@
   <!-- Política de Privacidade -->
   <url>
     <loc>https://tabernasaloia.com/privacidade</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
