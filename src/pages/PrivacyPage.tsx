@@ -12,7 +12,7 @@ const PrivacyPage = () => {
     title: "Política de Privacidade - Taberna Saloia",
     description:
       "Política de privacidade e de cookies da Taberna Saloia, restaurante tradicional em Loures, em conformidade com o RGPD.",
-    canonical: "https://tabernasaloia.pt/privacidade",
+    canonical: "https://tabernasaloia.com/privacidade",
   });
 
   return (
@@ -35,7 +35,7 @@ const PrivacyPage = () => {
                   A presente Política de Privacidade descreve como a{" "}
                   <span className="text-earth font-medium">Taberna Saloia</span> recolhe, utiliza e
                   protege os dados pessoais dos visitantes do site{" "}
-                  <span className="text-earth font-medium">tabernasaloia.pt</span>, em conformidade
+                  <span className="text-earth font-medium">tabernasaloia.com</span>, em conformidade
                   com o Regulamento (UE) 2016/679 (Regulamento Geral sobre a Proteção de Dados —
                   «RGPD») e com a legislação portuguesa aplicável em matéria de proteção de dados e
                   privacidade nas comunicações eletrónicas.
@@ -64,8 +64,8 @@ const PrivacyPage = () => {
                   </li>
                   <li>
                     Email:{" "}
-                    <a href="mailto:info@tabernasaloia.pt" className={linkClass}>
-                      info@tabernasaloia.pt
+                    <a href="mailto:info@tabernasaloia.com" className={linkClass}>
+                      info@tabernasaloia.com
                     </a>
                   </li>
                 </ul>
@@ -244,8 +244,8 @@ const PrivacyPage = () => {
                 </ul>
                 <p>
                   Para exercer estes direitos, contacte-nos através do email{" "}
-                  <a href="mailto:info@tabernasaloia.pt" className={linkClass}>
-                    info@tabernasaloia.pt
+                  <a href="mailto:info@tabernasaloia.com" className={linkClass}>
+                    info@tabernasaloia.com
                   </a>{" "}
                   ou do telefone{" "}
                   <a href="tel:+351219831176" className={linkClass}>

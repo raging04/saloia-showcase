@@ -57,9 +57,9 @@ const Footer = () => {
                 <Phone className="w-4 h-4 mr-2" aria-hidden="true" />
                 <span>+351 21 983 11 76</span>
               </a>
-              <a href="mailto:info@tabernasaloia.pt" className="flex items-center hover:text-white transition-colors">
+              <a href="mailto:info@tabernasaloia.com" className="flex items-center hover:text-white transition-colors">
                 <Mail className="w-4 h-4 mr-2" aria-hidden="true" />
-                <span>info@tabernasaloia.pt</span>
+                <span>info@tabernasaloia.com</span>
               </a>
               <div className="flex items-start">
                 <MapPin className="w-4 h-4 mr-2 mt-1" aria-hidden="true" />

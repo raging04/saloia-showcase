@@ -7,7 +7,7 @@ interface SeoOptions {
   canonical?: string;
 }
 
-const SITE_URL = "https://tabernasaloia.pt";
+const SITE_URL = "https://tabernasaloia.com";
 
 function setMeta(attr: "name" | "property", key: string, content: string) {
   let el = document.head.querySelector<HTMLMetaElement>(`meta[${attr}="${key}"]`);

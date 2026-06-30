@@ -4,8 +4,8 @@
   <p>Official website for <strong>Taberna Saloia</strong></p>
 
   <p>
-    <a href="https://tabernasaloia.pt" target="_blank">
-            <img src="https://img.shields.io/badge/Website-tabernasaloia.pt-blue?style=for-the-badge&logo=googlechrome" alt="Website Link" /> </a>
+    <a href="https://tabernasaloia.com" target="_blank">
+            <img src="https://img.shields.io/badge/Website-tabernasaloia.com-blue?style=for-the-badge&logo=googlechrome" alt="Website Link" /> </a>
 
   </p>
 </div>
