@@ -6,7 +6,7 @@
 
   <!-- Página Principal -->
   <url>
-    <loc>https://tabernasaloia.pt/</loc>
+    <loc>https://tabernasaloia.com/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
   <!-- Ementa -->
   <url>
-    <loc>https://tabernasaloia.pt/ementa</loc>
+    <loc>https://tabernasaloia.com/ementa</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -22,7 +22,7 @@
 
   <!-- Contactos -->
   <url>
-    <loc>https://tabernasaloia.pt/contactos</loc>
+    <loc>https://tabernasaloia.com/contactos</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -30,7 +30,7 @@
 
   <!-- Política de Privacidade -->
   <url>
-    <loc>https://tabernasaloia.pt/privacidade</loc>
+    <loc>https://tabernasaloia.com/privacidade</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

@@ -13,7 +13,7 @@ const MenuPage = () => {
     title: "Ementa - Taberna Saloia, Loures",
     description:
       "Veja a ementa da Taberna Saloia: petiscos, peixe, carne e sugestões vegetarianas. Cozinha tradicional portuguesa no Infantado, Loures.",
-    canonical: "https://tabernasaloia.pt/ementa",
+    canonical: "https://tabernasaloia.com/ementa",
   });
 
   return (

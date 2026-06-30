@@ -9,7 +9,7 @@ const ContactPage = () => {
     title: "Contactos - Taberna Saloia, Loures",
     description:
       "Contactos, horário e localização da Taberna Saloia no Infantado, Loures. Telefone: +351 21 983 11 76.",
-    canonical: "https://tabernasaloia.pt/contactos",
+    canonical: "https://tabernasaloia.com/contactos",
   });
 
   return (

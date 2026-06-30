@@ -52,8 +52,8 @@ const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <a href="mailto:info@tabernasaloia.pt" className="text-foreground hover:text-earth transition-colors">
-                  info@tabernasaloia.pt
+                <a href="mailto:info@tabernasaloia.com" className="text-foreground hover:text-earth transition-colors">
+                  info@tabernasaloia.com
                 </a>
                 <p className="text-muted-foreground text-sm mt-1">
                   Para reservas e eventos

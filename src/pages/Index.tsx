@@ -11,7 +11,7 @@ const Index = () => {
     title: "A Taberna Saloia - Restaurante Tradicional em Loures, no Infantado",
     description:
       "Taberna Saloia em Loures - Restaurante tradicional português no Infantado. Especialidades: Bacalhau, Cozido, Feijoada, Caracoletas. Reservas: +351 21 983 11 76",
-    canonical: "https://tabernasaloia.pt/",
+    canonical: "https://tabernasaloia.com/",
   });
 
   return (
