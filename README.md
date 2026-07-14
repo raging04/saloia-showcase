@@ -29,7 +29,7 @@ A pet project for the Taberna Saloia restaurant, based in Loures, Portugal. Buil
 1. **Clone the repository**
 
    ```bash
-   git clone <repository-url>
+   git clone [<repository-url>](https://github.com/raging04/saloia-showcase/)
    cd saloia-showcase
    ```
 
