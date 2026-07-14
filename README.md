@@ -14,7 +14,7 @@
 
 ## About the Project
 
-A pet project for the Taberna Saloia restaurant, based in Loures, Portugal. Built to provide a fast, appealing, and responsive experience for users, utilizing a modern ecosystem based on **React** and **Vite**. A large part of the code was AI-generated, using the **Google Gemini** models to improve a **Lovable.ai** generated template.
+A pet project for the Taberna Saloia restaurant, based in Loures, Portugal. Built to provide a fast, appealing, and responsive experience for users, utilizing a modern ecosystem based on **React** and **Vite**. A large part of the code was AI-generated, using **Google Gemini** and **Claude** models models to improve a **Lovable.ai** generated template.
 
 ## Tech Stack
 
