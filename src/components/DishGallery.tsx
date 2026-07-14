@@ -52,7 +52,7 @@ const DynamicGallery = () => {
       id: 1,
       name: "Bacalhau em Crosta de Broa",
       description: "Bacalhau fresco coberto com crosta crocante de broa tradicional, acompanhado de batatas e legumes da época",
-      image: "/0072B4EB-242A-4709-94EF-3F23D8B7CC62.JPG",
+      image: "/0072B4EB-242A-4709-94EF-3F23D8B7CC62.jpg",
       type: "image"
     },
     {
@@ -66,77 +66,77 @@ const DynamicGallery = () => {
       id: 3,
       name: "A nossa sala",
       description: "A sala principal da Taberna Saloia, decorada com elementos tradicionais portugueses e ambiente familiar",
-      image: "/14572A16-3B9D-4074-BFEF-F9D28B74FD78.JPG",
+      image: "/14572A16-3B9D-4074-BFEF-F9D28B74FD78.jpg",
       type: "image"
     },
     {
       id: 4,
       name: "Um pijama de sobremesas",
       description: "Seleção de sobremesas tradicionais portuguesas, preparadas com carinho e ingredientes frescos",
-      image: "/A27B192A-2E5A-41A4-879F-35E72BB0114E.JPG",
+      image: "/A27B192A-2E5A-41A4-879F-35E72BB0114E.jpg",
       type: "image"
     },
     {
       id: 5,
       name: "Cozido à Portuguesa",
       description: "O tradicional cozido português com carnes, enchidos e legumes, preparado com receita de família",
-      image: "/9B7A8E8F-6562-45A4-A668-25DEB75548EC.JPG",
+      image: "/9B7A8E8F-6562-45A4-A668-25DEB75548EC.jpg",
       type: "image"
     },
     {
       id: 6,
       name: "Pica-Pau",
       description: "Pica-pau tradicional português, com batatas frita e molho caseiro",
-      image: "/EA096665-7906-4935-8417-15E8E54F134D.JPG",
+      image: "/EA096665-7906-4935-8417-15E8E54F134D.jpg",
       type: "image"
     },
     {
       id: 7,
       name: "Bife 3 Pimentas",
       description: "Bife suculento temperado com três tipos de pimenta, acompanhado de batata frita",
-      image: "/D597D731-6651-4F75-AD18-2C200020C075.JPG",
+      image: "/D597D731-6651-4F75-AD18-2C200020C075.jpg",
       type: "image"
     },
     {
       id: 8,
       name: "Dia dos Namorados 2023",
       description: "Celebração especial do Dia dos Namorados, com ambiente romântico e menu especial",
-      image: "/B8E1B1AE-6AFE-4976-9B2B-16506EB813B4.JPG",
+      image: "/B8E1B1AE-6AFE-4976-9B2B-16506EB813B4.jpg",
       type: "image"
     },
     {
       id: 9,
       name: "Caracoletas",
       description: "Caracoletas da região saloia de Loures, servidas com molho caseiro e acompanhamentos tradicionais",
-      image: "/6BEE5118-A2D5-4EA7-B0EF-AB840FDD1140.JPG",
+      image: "/6BEE5118-A2D5-4EA7-B0EF-AB840FDD1140.jpg",
       type: "image"
     },
     {
       id: 10,
       name: "Tornedó do Lombo",
       description: "Tornedó de lombo suculento, grelhado no ponto e servido com molho caseiro e batata frita",
-      image: "/DE9D01DD-3038-4F12-A9B1-C3F40B01AB79.JPG",
+      image: "/DE9D01DD-3038-4F12-A9B1-C3F40B01AB79.jpg",
       type: "image"
     },
     {
       id: 11,
       name: "Feijoada à Transmontana",
       description: "Feijoada tradicional transmontana com feijão, carnes de porco e enchidos regionais, servida com arroz e couve",
-      image: "/09229FB3-4103-4DDF-BC52-B80F09D65950.JPG",
+      image: "/09229FB3-4103-4DDF-BC52-B80F09D65950.jpg",
       type: "image"
     },
     {
       id: 12,
       name: "Feijoada de Choco",
       description: "Feijoada de choco, preparada com choco fresco, feijão branco e temperos regionais",
-      image: "/D9879CBE-7B70-410B-86D7-6F7C905292B6.JPG",
+      image: "/D9879CBE-7B70-410B-86D7-6F7C905292B6.jpg",
       type: "image"
     },
     {
       id: 13,
       name: "Pernil Assado no Forno",
       description: "Pernil assado no forno, especialidade da casa, cozinhado lentamente com temperos caseiros até ficar tenro e suculento, servido com batatas assadas e legumes",
-      image: "/448fb5f8-1c51-40d9-9327-0f43c46aa094.MP4",
+      image: "/448fb5f8-1c51-40d9-9327-0f43c46aa094.mp4",
       poster: "/pernil-poster.jpg",
       type: "video"
     },
@@ -158,35 +158,35 @@ const DynamicGallery = () => {
       id: 16,
       name: "Risotto de Gambas e Cogumelos Selvagens",
       description: "Risotto cremoso italiano preparado com gambas frescas, cogumelos selvagens da época e arroz arborio, finalizado com queijo parmesão e ervas aromáticas",
-      image: "/d6f07f81-ab22-4cf0-83ae-aa985cdae672.JPG",
+      image: "/d6f07f81-ab22-4cf0-83ae-aa985cdae672.jpg",
       type: "image"
     },
     {
       id: 17,
       name: "Polvo à Lagareiro",
       description: "Polvo à Lagareiro tradicional português, cozinhado lentamente até ficar tenro, servido com batatas a murro, legumes e regado com azeite quente e alho",
-      image: "/0db4598d-2744-4d6c-a0fb-c96a46aad08e.JPG",
+      image: "/0db4598d-2744-4d6c-a0fb-c96a46aad08e.jpg",
       type: "image"
     },
     {
       id: 18,
       name: "CR&F Reserva Extra",
       description: "Vinho CR&F Reserva Extra, uma seleção especial.",
-      image: "/25cb02fe-e907-4af7-9d13-37aac952ff01.JPG",
+      image: "/25cb02fe-e907-4af7-9d13-37aac952ff01.jpg",
       type: "image"
     },
     {
       id: 19,
       name: "O nosso espaço",
       description: "O ambiente acolhedor e familiar da Taberna Saloia",
-      image: "/9479cd12-05ea-4abe-85cd-d663b3277583.JPG",
+      image: "/9479cd12-05ea-4abe-85cd-d663b3277583.jpg",
       type: "image"
     },
     {
       id: 20,
       name: "Ensopado de Borrego",
       description: "Ensopado de borrego tradicional, carne tenra servido com batatas e pão tostado",
-      image: "/64a3fc78-b7ec-42e0-92b0-e7488a177a4b.JPG",
+      image: "/64a3fc78-b7ec-42e0-92b0-e7488a177a4b.jpg",
       type: "image"
     },
     {
