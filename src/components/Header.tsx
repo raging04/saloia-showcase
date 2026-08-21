@@ -4,62 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-
-const OPENING_HOURS_LABEL = "Seg-Sáb: 12:00-15:00 | 19:00-23:00";
-const SCHEDULE_NOTE = "Quarta: Sem jantar | Domingo: Encerrado";
-const DAY_NAMES = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"];
-
-interface Period {
-  open: number; // hour (24h)
-  close: number;
-}
-
-// Single source of truth for the opening schedule.
-// Lunch every day except Sunday; dinner every day except Wednesday and Sunday.
-function periodsForDay(day: number): Period[] {
-  if (day === 0) return []; // Domingo: encerrado
-  const periods: Period[] = [{ open: 12, close: 15 }];
-  if (day !== 3) periods.push({ open: 19, close: 23 }); // Quarta: sem jantar
-  return periods;
-}
-
-function fmt(hour: number) {
-  return `${String(hour).padStart(2, "0")}:00`;
-}
-
-interface RestaurantStatus {
-  isOpen: boolean;
-  label: string;
-  message: string;
-  detail: string;
-}
-
-function getRestaurantStatus(now: Date): RestaurantStatus {
-  const day = now.getDay();
-  const time = now.getHours() + now.getMinutes() / 60;
-  const current = periodsForDay(day).find((p) => time >= p.open && time < p.close);
-
-  if (current) {
-    return {
-      isOpen: true,
-      label: "Aberto",
-      message: "Estamos abertos agora",
-      detail: `Fechamos às ${fmt(current.close)}`,
-    };
-  }
-
-  // Find the next opening across today (later) and the coming days.
-  for (let offset = 0; offset < 8; offset++) {
-    const d = (day + offset) % 7;
-    for (const p of periodsForDay(d)) {
-      if (offset === 0 && time >= p.open) continue; // already past today
-      const when =
-        offset === 0 ? `às ${fmt(p.open)}` : offset === 1 ? `amanhã às ${fmt(p.open)}` : `${DAY_NAMES[d]} às ${fmt(p.open)}`;
-      return { isOpen: false, label: "Fechado", message: "Estamos fechados", detail: `Abrimos ${when}` };
-    }
-  }
-  return { isOpen: false, label: "Fechado", message: "Estamos fechados", detail: "" };
-}
+import {
+  getRestaurantStatus,
+  HOLIDAY_RANGE_LABEL,
+  isHolidayRelevant,
+  OPENING_HOURS_LABEL,
+  SCHEDULE_NOTE,
+} from "@/data/schedule";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -74,6 +25,9 @@ const Header = () => {
   }, []);
 
   const restaurantStatus = getRestaurantStatus(now);
+  const holidayNotice = isHolidayRelevant(now)
+    ? `Férias: fechado de ${HOLIDAY_RANGE_LABEL}`
+    : null;
 
   const menuItems = [
     { name: "Início", href: "/" },
@@ -132,6 +86,7 @@ const Header = () => {
                     <div className="mt-2 text-xs text-muted-foreground">
                       <p>{OPENING_HOURS_LABEL}</p>
                       <p>{SCHEDULE_NOTE}</p>
+                      {holidayNotice && <p className="text-earth font-medium">{holidayNotice}</p>}
                     </div>
                   </div>
                 </TooltipContent>
@@ -168,6 +123,7 @@ const Header = () => {
                   <div className="text-xs text-muted-foreground space-y-1">
                     <p>{OPENING_HOURS_LABEL}</p>
                     <p>{SCHEDULE_NOTE}</p>
+                    {holidayNotice && <p className="text-earth font-medium">{holidayNotice}</p>}
                   </div>
                 </div>
               </DialogContent>

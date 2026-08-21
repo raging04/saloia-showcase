@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import { HOLIDAY_RANGE_LABEL, isHolidayRelevant } from "@/data/schedule";
 
 const MAPS_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY as string | undefined;
 const MAPS_QUERY = "Taberna Saloia,Av. Descobertas n° 41 Loja esquerda, 2670-384 Loures";
@@ -82,6 +83,12 @@ const Contact = () => {
                     <span>Domingo e Feriados:</span>
                     <span>Encerrado</span>
                   </div>
+                  {isHolidayRelevant(new Date()) && (
+                    <div className="flex justify-between font-medium text-earth">
+                      <span>Férias:</span>
+                      <span>{HOLIDAY_RANGE_LABEL}</span>
+                    </div>
+                  )}
                 </div>
               </CardContent>
             </Card>

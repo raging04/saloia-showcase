@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import facebookLogo from "@/assets/facebook-svgrepo-com.svg";
 import instagramLogo from "@/assets/instagram-svgrepo-com.svg";
 import linktreeLogo from "@/assets/Linktree Logo.svg";
+import { HOLIDAY_RANGE_LABEL, HOLIDAY_REOPEN_LABEL, isHolidayRelevant } from "@/data/schedule";
 
 const Footer = () => {
   return (
@@ -77,6 +78,11 @@ const Footer = () => {
             <div className="space-y-1 text-earth-foreground/80 text-sm">
               <p>Seg-Sáb (Exceto quarta-feira ao jantar): 12:00-15:00 | 19:00-23:00</p>
               <p>Estamos encerrados aos domingos.</p>
+              {isHolidayRelevant(new Date()) && (
+                <p className="font-medium text-earth-foreground">
+                  Férias: fechado de {HOLIDAY_RANGE_LABEL}. Reabrimos {HOLIDAY_REOPEN_LABEL}.
+                </p>
+              )}
             </div>
           </div>
         </div>
